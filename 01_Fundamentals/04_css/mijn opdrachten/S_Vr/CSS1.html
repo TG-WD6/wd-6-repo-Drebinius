@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectors & Visual Rules</title>
+  <link href="#" rel="stylesheet">
+  <style>
+  </style>
+</head>
+
+<body>
+  <navbar>
+    <ul>
+      <li><a href="#opdr1" target="_self">Opdracht 1</a></li>
+      <li><a href="#opdr2" target="_self">Opdracht 2</a></li>
+      <li><a href="#opdr3" target="_self">Opdracht 3</a></li>
+      <li><a href="#" target="_self"></a></li>
+    </ul>
+  </navbar>
+  <div>
+    <h2 id="opdr1">Opdracht 1</h2>
+    CSS kan included worden op 3 verschillende manieren.<br>
+    <br>
+    door middel van:
+    <ul>
+      <li>een <em>external</em> stylesheet</li>
+      <li>een <em>internal</em> stylesheet</li>
+      <li>inline styling</li>
+    </ul>
+    <h3>external</h3>
+    <p>Een external stylesheet wordt over het algemeen het meest gebruikt.
+      Hierin wordt CSS in een apart .css bestand opgeslagen.
+      Vervolgens kun je deze aan je HTML linken dmv '<strong>link rel="stylesheet" href="styles.css"</strong>'
+      Een voordeel van deze wijze is dat je 1 .css file aan meerdere HTML's kan linken, waardoor dezelfde CSS op
+      verschillende HTML applied kan worden.</p>
+
+    <h3>internal</h3>
+    <p>Een internal stylesheet bevindt zich in het HTML doc zelf.
+      Dit is CSS geplaatst in een <strong>style</strong> element dat zich in de HTML <strong>head</strong> bevindt.
+      Een nadeel van deze wijze is dat de CSS alleen deze HTML file beinvloedt. Dit zou dus betekenen dat als je een
+      site-wide
+      aanpassing wilt doorvoeren, alle inhoud van de style elements in de HTML bestanden stuk voor stuk aangepast zouden
+      moeten worden.</p>
+
+    <h3>inline</h3>
+    <p>Inline styling zijn toevoegingen die in een enkel HTML element geplaatst worden, achter een 'style="#"'
+      attribuut.
+      Dit betekent dat voor algemene stijlaanpassing er <strong>per element</strong> aangepast moet worden.
+      Ook zorgt het voor een minder overzichtelijke code omdat HTML en CSS niet gescheiden worden gehouden.
+      <br>
+      Er zijn wel uitzonderingen waarin inline styling van toepassing kan zijn.
+      Als je met je huidige edit rights geen content buiten bepaalde elements mag aanpassen,
+      kan je dit toch doen door inline toe te passen.
+    </p>
+  </div>
+  <div>
+    <h2 id="opdr2">Opdracht 2</h2>
+    <p>een CSS ruleset bestaat uit 3 onderdelen:</p>
+    <ul>
+      <li>Selectors</li>
+      <li>Properties</li>
+      <li>Values</li>
+    </ul>
+    <p>
+      Elke CSS start met een of meerdere <strong>selector(s)</strong>.
+      De selector target specifieke secties HTML om te beinvloeden.
+      <br>
+      <br>
+      Vervolgens komen de <strong>properties</strong> aan bod.
+      Dit zijn identifiers die duidelijk aangeven welke feature ze influencen, bijv font-size, background-color of
+      border.
+      <br>
+      <br>
+      Hierna volgen de <strong>values</strong>, dit zijn de waarden die je aan properties toeschrijft. bijv
+      <em>blue</em> aan <em>color</em>
+      <br>
+      <br>
+      Als een property een value toegewezen heeft gekregen, noem je deze samen een <strong>CSS declaration</strong>.<br>
+      Alle CSS declarations van 1 selector tesamen noem je een <strong>CSS declaration block</strong>.<br>
+      Al deze components samengevoegd vormen de uiteindelijke <strong>CSS ruleset</strong>.
+    </p>
+  </div>
+  <div>
+    <h2 id="opdr3">Opdracht 3</h2>
+    De 4 soorten selectors die we gaan beschrijven:<br>
+    <ul>
+      <li>Type selectors</li>
+      <li>Class selectors</li>
+      <li>ID selectors</li>
+      <li>Descendant selectors</li>
+    </ul>
+    <h4>Type selectors</h4>
+    <p>
+      een type selector, ook wel tag name selector of element selector genoemd,
+      specificeert een bepaalde HTML tag/element in je HTML doc.<br>
+      <br>
+    <fieldset class="example__type">
+      <legend>Example</legend>
+      <code>
+        * {<br>
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',<br>
+             'Lucida Sans Unicode', Geneva, Verdana, sans-serif;<br>
+        }<br><br>
+           span {<br>
+        background-color: yellow;<br>
+    }<br><br>
+    
+    strong {<br>
+        color: rebeccapurple;<br>
+    }<br><br>
+    
+    em {<br>
+        color: rebeccapurple;<br>
+            }</code>
+    </fieldset>
+    In het bovenstaande voorbeeld zijn *, span, strong en em de type selectors.
+    </p>
+    <h4>Class selectors</h4>
+    <p>
+      De class selector begint met een punt (.)
+      en daarop volgend de naam van de class die je aan een of meerdere element(s) hebt toegeschreven.<br>
+      Dus als je een &lt;p&gt;, &lt;span&gt; en &lt;div&gt; de class="kaas" geeft, kan je deze
+      (verschillende) elementen aanschrijven dmv de class selector .kaas te gebruiken.<br>
+      Op deze wijze zou je maar 1 CSS entry nodig hebben om alle 3 de elements te stylen.<br>
+
+      <br>
+    <fieldset class="example__class">
+      <legend>Example</legend>
+      <code>
+         <strong>HTML:</strong><br>
+        &lt;p class="kaas"&gt;, &lt;span class="kaas"&gt; en &lt;div class="kaas"&gt;<br><br><br>
+
+        <strong>CSS:</strong><br>
+
+         .kaas {<br>
+          text-decoration-color: hotpink;<br>
+         }<br>
+       </code>
+    </fieldset>
+    In het bovenstaande voorbeeld staat er in CSS een punt ( . ) voor de class kaas, wat alle elementen met die
+    aangegeven class selecteert.
+    </p>
+    <h4>ID selectors</h4>
+    <p>
+      de ID selector begint met een hash (#)
+      en daarop volgend de naam van de ID die je aan een element hebt toegeschreven.<br>
+      Dus als je een &lt;p&gt; de id="K1" geeft, kan je dit element aanschrijven dmv de class selector #K1 te
+      gebruiken.<br>
+      Het voordeel van de ID selector is dat je je CSS styling makkelijk tot 1 specifiek element kan limiteren.
+
+      <br>
+    <fieldset class="example__id">
+      <legend>Example</legend>
+      <code>
+        <strong>HTML:</strong><br>
+        &lt;p id="K1"&gt;<br><br><br>
+
+        <strong>CSS:</strong><br>
+
+         #K1 {<br>
+          text-decoration-color: hotpink;<br>
+         }<br>
+       </code>
+    </fieldset>
+    In het bovenstaande voorbeeld heeft een &lt;p&gt; de ID "K1" gekregen. Vervolgens kan in CSS alleen dit specifieke
+    element gestyled worden door #id als selector te gebruiken.
+    </p>
+    <h4>Descendant selectors</h4>
+    <p>
+      De descendant selectors worden aangegeven met een spatie " ", tilde "~", plus "+" of een angle bracket ">" tussen
+      2 selectors in.<br>
+      Dit zorgt ervoor dat alle elementen die overeenkomen met de selector <em>na</em> de spatie, en een ancestor hebben
+      die overeenkomt met de selector <em>voor</em> de spatie, geselecteerd en dus gestyled kunnen worden.<br>
+      <br>
+    <ul>
+      <li>een spatie selecteert alle 2e elementen die een ancestor hebben die overeenkomt met het 1e aangeduide element
+      </li>
+      <li>een tilde selecteert alle 2e elementen die gelijk zijn binnen het 1e (parent) element </li>
+      <li>een plus selecteert alle 2e elementen die <strong>direct</strong> op het 1e (parent) aangeduide element volgen
+        (siblings).</li>
+      <li>een angle bracket selecteert alle 2e elementen die children van het 1e element zijn.</li>
+    </ul>
+    <br>
+    <fieldset class="example__desc">
+      <legend>Example</legend>
+      <code>
+         div > p {<br>
+          text-decoration-color: hotpink;<br>
+         }<br>
+       </code>
+    </fieldset>
+    In het bovenstaande voorbeeld worden alle &lt;p&gt; elements die ergens in de ancestry een &lt;div&gt; ancestor
+    hebben aangeschreven.
+    </p>
+  </div>
+</body>
