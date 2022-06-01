@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box models</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            box-sizing: border-box;
+        }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        .box__opdr2--div {
+            background-color: lightgreen;
+            width: 45em;
+            border-right: 0.2em solid lightgreen;
+        }
+
+        .box__opdr2--para1 {
+            display: flex;
+            background-color: green;
+            width: 45em;
+            border: 0.1em solid black;
+            border-bottom: 0.13em solid black;
+        }
+
+        .box__opdr2--para2 {
+            display: block;
+            background-color: green;
+            width: 45em;
+            border: 0.1em solid black;
+        }
+
+        .box__opdr2--span {
+            display: inline;
+            background-color: white;
+            border-left: 0.1em solid black;
+            border-right: 0.1em solid black;
+            margin-left: 0.2em;
+            margin-right: 0.2em;
+        }
+
+        .box__opdr5-6--ex1 {
+            background-color: hotpink;
+            max-width: 45em;
+            padding: 20px ;
+            border: 15px solid darkblue;
+            margin: 10px;
+        }
+
+        .box__opdr5-6--ex2 {
+            background-color: hotpink;
+            max-width: 45em;
+            padding: 20px ;
+            border: 15px solid darkblue;
+        }
+        .box__opdr7--div {
+            background-color: lightgrey;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            padding: 5px;
+            border-width: 5px;
+            border-style: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Box models</h1>
+        <div>
+            <h2>Opdracht 1</h2>
+            <p>er zijn 2 verschillende soorten box, <strong>block</strong> en <strong>inline</strong>.
+                deze worden toegepast op <strong>outer display type</strong></p><br>
+            <div>
+                <p><strong>block</strong> gedraagt zich als volgend</p>
+                <ul>
+                    <li>begint op een nieuwe lijn</li><br>
+                    <li>de box wordt vaak zo breed als de regel waarop hij staat</li><br>
+                    <li>kan gestyled worden met height en width</li><br>
+                    <li>padding, margin en border duwen andere elementen uit de weg</li><br>
+                </ul>
+                sommige HTML elementen zoals &lt;h1&gt; en &lt;p&gt; hebben standaard een block box als outer display
+                type
+
+            </div>
+            <div>
+                <p><strong>inline</strong> gedraagt zich als volgend</p>
+                <ul>
+                    <li>begint op <strong>niet</strong> een nieuwe lijn</li><br>
+                    <li>height en width beinvloeden de box <strong>niet</strong></li><br>
+                    <li><strong>vertical</strong> padding, margins en borders zijn van toepassing,<br> maar hebben
+                        <strong>geen</strong> invloed op andere inline boxes
+                    </li><br>
+                    <li><strong>horizontal</strong> padding, margin en border zijn van toepassing,<br> en zijn
+                        <strong>wel</strong> van invloed op andere inline boxes
+                    </li><br>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Opdracht 2</h2>
+        <div class="box__opdr2--div">
+            <p class="box__opdr2--para1">Dit is een block box en neemt de hele breedte in waardoor de volgende box op de
+                volgende regel zit</p>
+            <p class="box__opdr2--para2">in dit block zit <span class="box__opdr2--span">inline tekst</span> in wat dus
+                niet op de volgende regel komt te <span class="box__opdr2--span">staan</span></p>
+
+        </div>
+        <br><br>
+    </section>
+    <section>
+        <h2>Opdracht 3</h2>
+        <div>
+            <p>Wat er gebeurt als ik een width en height toevoeg aan de span tag?<br>
+                Helemaal niks. width en height beinvloeden inline niet.</p>
+        </div>
+    </section>
+    <section>
+        <h2>Opdracht 4</h2>
+        <div>
+            <ul>
+                <li>Content</li>
+                <span>Content is de inhoud van het element waar het block aan gelinkt staat.
+                    Zoals deze tekst de inhoud van deze paragraph is.</span>
+                <br>
+                <br>
+                <li>Padding</li>
+                <span>Padding is de volgende 4 zijdige 'laag' om de contentbox heen. Hier staat ook de background color aan vast.</span>
+                <br>
+                <br>
+                <li>Border</li>
+                <span>Border is de following 4 zijdige layer om de padding heen </span>
+                <br>
+                <br>
+                <li>Margin</li>
+                <span>margin is de 4 zijde layer 'whitespace'. wordt vooral gebruikt voor positionering en om meerdere boxes op elkaar af te stellen.<br>
+                als 2 naastgelegen boxes beiden een margin value hebben, word alleen de grootste margin value grbruikt</span>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h2>Opdracht 5 & 6</h2>
+        <div>
+           <div class="box__opdr5-6--ex1"> Ich bin ein Boxliner</div>
+           <div class="box__opdr5-6--ex2"> box</div>
+           <p>in de bovenstaande boxes is padding(roze) gebruikt om de ruimte tussen content en border te vergroten.<br>
+                margin is gebruikte om de ruimte rondom de 'boxliner' box aan te passen</p>
+
+        </div>
+    </section>
+    <section>
+        <h2>Opdracht 7</h2>
+        <div>
+           <div class="box__opdr7--div">vermakelijke content</div>
+        </div>
+        <p>
+            <ol>
+                <li>volgens de inspectietool is de box exact 120x120 px.</li>
+                <li>volgens de inspectietool is de box exact 120x120 px.</li>
+                <li>negatieve waarden zijn nvt, beinvloeden de andere properties </li>
+            </ol>
+        </p>
+    </section>
+    <section>
+        <h2>Opdracht 8</h2>
+        <p>ik geloof dat dit bereikt kan worden dmv inheritance (zie regel 12 en 16)</p>
+        
+    </section>
+</body>
+
+</html>
