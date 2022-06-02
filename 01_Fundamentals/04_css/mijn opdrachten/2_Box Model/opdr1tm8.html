@@ -164,9 +164,10 @@
         </div>
         <p>
             <ol>
-                <li>volgens de inspectietool is de box exact 120x120 px.</li>
-                <li>volgens de inspectietool is de box exact 120x120 px.</li>
-                <li>negatieve waarden zijn nvt, beinvloeden de andere properties </li>
+                <li>width 100px + 2x 5px padding + 2x 5px border = width 120px.</li>
+                <li>zelfde berekening als bij width, height 120px</li>
+                <li>bij width worden de 2 horizontale zijden van de padding en border bijgerekend, voor height de 2 verticale zijden.<br>
+                margin wordt hier niet bijgerekend. <strong>box-sizing: border-box</strong> zorgt ervoor dat deze padding/border <em>niet</em> bovenop de w&h komt, maar <em>erbij</em> meegerekend wordt</li>
             </ol>
         </p>
     </section>
