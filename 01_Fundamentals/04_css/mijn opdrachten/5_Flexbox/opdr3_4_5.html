@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 3, 4, 5</title>
+</head>
+<style>
+    .flex__container--main {
+        display: flex;
+        background-color: palegoldenrod;
+        width: 1000px;
+        height: 100px;
+        /* justify-content: center; */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .flex__box {
+        display: flex;
+        width: 75px;
+        height: 75px;
+        background-color: lightgreen;
+        text-align: justify;
+        justify-content: center;
+        align-items: center;
+        font-size: x-large;
+        font-weight: 600;
+        margin: 10px;
+    }
+
+    .flex__box--02 {
+        flex-grow: 4;
+    }
+</style>
+<body>
+    <section class="flex__container--main">
+        <div class="flex__box flex__box--01">
+            1
+        </div>
+        <div class="flex__box flex__box--02">
+            2
+        </div>
+        <div class="flex__box flex__box--03">
+            3
+        </div>
+        <div class="flex__box flex__box--04">
+            4
+        </div>
+        <div class="flex__box flex__box--05">
+            5
+        </div>
+        <div class="flex__box flex__box--06">
+            6
+        </div>
+    </section>
+    <section>
+        <p>both justify-content and align-items have been used in this example.</p>
+    </section>
+</body>
+
+</html>

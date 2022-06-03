@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 8</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .flex__container--main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* justify-content: center; */
+        /* background-color: rgb(243, 239, 193); */
+        width: 360px;
+        height: 240px;
+        /* align-items: center; */
+        /* gap: 5px; */
+    }
+
+    .flex__box {
+        display: flex;
+        width: 120px;
+        height: 120px;
+        border: thin solid black;
+        border-radius: 10px;
+        text-align: justify;
+        justify-content: center;
+        align-items: center;
+        font-size: x-large;
+        font-weight: 600;
+    }
+
+    .flex__box--01 {
+        background-color: rgb(243, 239, 193);
+
+    }
+
+    .flex__box--02 {
+        background-color: rgb(111, 215, 247);
+
+    }
+
+    .flex__box--03 {
+        background-color: rgb(158, 248, 199);
+
+    }
+
+    .flex__box--04 {
+        background-color: rgb(255, 255, 255);
+
+    }
+
+    .flex__box--05 {
+        background-color: rgb(0, 0, 0);
+
+    }
+
+    .flexbox__05--span {
+        color: rgb(255, 255, 255)
+    }
+
+    .flex__box--06 {
+        background-color: #85c4ff;
+        background-image: linear-gradient(
+            to right,
+            #4c49f3,
+            #9f99f5,
+            #85c4ff   
+        );
+
+    }
+</style>
+
+<body>
+    <section class="flex__container--main">
+        <div class="flex__box flex__box--01">
+            1
+        </div>
+        <div class="flex__box flex__box--02">
+            2
+        </div>
+        <div class="flex__box flex__box--03">
+            3
+        </div>
+        <div class="flex__box flex__box--04">
+            4
+        </div>
+        <div class="flex__box flex__box--05">
+            <span class="flexbox__05--span">5</span>
+        </div>
+        <div class="flex__box flex__box--06">
+            6
+        </div>
+    </section>
+</body>
+
+</html>
