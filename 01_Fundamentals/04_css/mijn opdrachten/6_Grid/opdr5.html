@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opdracht 2</title>
+    <title>Opdracht 5</title>
     <link rel="stylesheet" href="#">
     <style>
         *,
@@ -21,17 +21,24 @@
         }
 
         section {
+            /* okay.. dit werkte op deze manier, en nu weet ik niet waar ik de repeat functie op zou moeten doorvoeren */
             display: grid;
             min-height: 100vh;
             min-width: 100vw;
             background-color: lightblue;
             padding: 25px;
-            grid-template-columns: repeat(4, minmax(10rem, 25%));
+            /* grid-template-columns: 20rem 3fr; */
+            grid-template-columns:
+            repeat(3, minmax(10rem, 25%));
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "sidebar article1 article1 article1"
+            "sidebar article2 article2 article2";
+            /* grid-template-columns: 33.33%;
             grid-template-rows: auto;
             grid-template-areas:
-                "sidebar article1 article1 article1"
-                "sidebar article2 article2 article2";
-
+                "sidebar article1 article1"
+                "sidebar article2 article2"; */
         }
 
         section div {
@@ -50,6 +57,8 @@
 
         .article {
             background-color: white;
+            height: 200px;
+            width: 600px;
         }
 
         #article_1 {
@@ -58,6 +67,8 @@
 
         #article_2 {
             grid-area: article2;
+            /* align-self: center; */
+            place-self: center;
         }
     </style>
 </head>
