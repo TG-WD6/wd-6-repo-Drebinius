@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opdracht 3, 4</title>
-    <link rel="stylesheet" href="#">
+    <title>opdr9</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         *,
         *::before,
@@ -21,24 +21,13 @@
         }
 
         section {
-            /* okay.. dit werkte op deze manier, en nu weet ik niet waar ik de repeat functie op zou moeten doorvoeren */
             display: grid;
+            grid-auto-rows: auto;
+            grid-template-columns: repeat(3, 20rem);
             min-height: 100vh;
             min-width: 100vw;
             background-color: lightblue;
             padding: 25px;
-            /* grid-template-columns: 20rem 1fr 1fr 1fr; */
-            grid-template-columns:
-            repeat(4, minmax(10rem, 1fr));
-            grid-template-rows: auto;
-            grid-template-areas: 
-            "sidebar article1 article1 article1"
-            "sidebar article2 article2 article2";
-            /* grid-template-columns: 33.33%;
-            grid-template-rows: auto;
-            grid-template-areas:
-                "sidebar article1 article1"
-                "sidebar article2 article2"; */
         }
 
         section div {
@@ -49,7 +38,7 @@
         }
 
         .sidebar {
-            grid-area: sidebar;
+            grid-row: span 4/5;
             background-color: lightgreen;
             width: 100%;
             height: 100%;
@@ -60,11 +49,21 @@
         }
 
         #article_1 {
-            grid-area: article1;
+            grid-row: 1 / span 2;
+            grid-column: 2/5;
+            background-color: white;
         }
 
         #article_2 {
-            grid-area: article2;
+            grid-row: 3/5;
+            grid-column: 2/5;
+            background-color: white;
+        }
+
+        #article_3 {
+            grid-row-start: 5;
+            grid-column: 1/5;
+            background-color: white;
         }
     </style>
 </head>
@@ -75,10 +74,13 @@
             <p>Sidebar</p>
         </div>
         <div class="article" id="article_1">
-            <p>Article</p>
+            <p>Article1</p>
         </div>
         <div class="article" id="article_2">
-            <p>Article</p>
+            <p>Article2</p>
+        </div>
+        <div class="article" id="article_3">
+            <p>Article3</p>
         </div>
     </section>
 </body>

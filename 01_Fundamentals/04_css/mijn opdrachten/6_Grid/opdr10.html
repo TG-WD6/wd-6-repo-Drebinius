@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opdracht 3, 4</title>
-    <link rel="stylesheet" href="#">
+    <title>Opdracht 10</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         *,
         *::before,
@@ -19,26 +19,18 @@
             font-size: 28px;
             font-weight: bolder;
         }
-
+                    /*yep, vind zelf deze manier toch wel het prettigst.*/
         section {
-            /* okay.. dit werkte op deze manier, en nu weet ik niet waar ik de repeat functie op zou moeten doorvoeren */
             display: grid;
             min-height: 100vh;
             min-width: 100vw;
             background-color: lightblue;
             padding: 25px;
-            /* grid-template-columns: 20rem 1fr 1fr 1fr; */
-            grid-template-columns:
-            repeat(4, minmax(10rem, 1fr));
-            grid-template-rows: auto;
-            grid-template-areas: 
-            "sidebar article1 article1 article1"
-            "sidebar article2 article2 article2";
-            /* grid-template-columns: 33.33%;
+            grid-template-columns: repeat(4, minmax(20rem, 1fr));
             grid-template-rows: auto;
             grid-template-areas:
-                "sidebar article1 article1"
-                "sidebar article2 article2"; */
+                "sidebar article1 article1 article1"
+                "sidebar article2 article2 article2";
         }
 
         section div {
