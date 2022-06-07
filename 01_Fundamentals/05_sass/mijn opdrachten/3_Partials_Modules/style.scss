@@ -1,0 +1,14 @@
+//liep eerst tegen issue dat button :hover niet weergegeven werd. 
+//dit leek uiteindelijk aan de volgorde van de imports te liggen.
+//logica om op te letten: _button verwijst naar kleuren die in _color zijn vastgesteld.
+//om hiervan ''af te weten'' moet _colors dus boven _button staan
+@import "./colors";
+@import "./button";
+
+//opdracht 4. code geplaatst NA de imports overruled de imports.
+.button {
+    background-color: red;
+    &:hover{
+        background-color: aquamarine;
+    }
+}
