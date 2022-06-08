@@ -1,0 +1,26 @@
+// * {
+//     box-sizing: border-box;
+//     justify-content: center;
+//     align-content: center;
+//     justify-self: center;
+//     align-self: center;
+// }
+
+// .colorChangingSquare {
+//     position: relative;
+//     width: 150px;
+//     height: 150px;
+// }
+
+ body {
+     display: grid;
+     justify-items: center;
+     align-items: center;
+     grid-template-columns: repeat(3, minmax(33%, 1fr));
+     grid-template-rows: repeat(3, minmax(33%, 1fr));
+     grid-template-areas:
+     "one two three"
+     "four five six"
+     "seven eight nine";
+
+}

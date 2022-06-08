@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.colorChangingSquare {
+    display: grid;
+    grid-area: five;
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.section02 {
+    grid-area: eight;
+}
