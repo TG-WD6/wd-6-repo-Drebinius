@@ -1,0 +1,5 @@
+@import "./sass/variables";
+@import "./sass/layout";
+
+@media (max-width: $break-medium){.page-title{color: aqua;}}
+@media (min-width: $break-large){.page-title{color: red;}}
