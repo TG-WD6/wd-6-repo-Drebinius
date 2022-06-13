@@ -1,0 +1,81 @@
+.banner {
+    background-color: $color__banner;
+    display: flex;
+    position: fixed;
+    top: 0%;
+    width: 100vw;
+    z-index: 2;
+
+    &__logo {
+        display: flex;
+        justify-content: flex-start;
+        width: auto;
+        align-self: center;
+
+        // margin-left: 1%;
+        &__img {
+            max-width: 250px;
+            margin-top: 1%;
+        }
+    }
+
+    &__navbar {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        justify-content: space-between;
+        // height: auto;
+        padding: 10px;
+        width: 100%;
+        height: 6em;
+
+        &__list {
+            justify-self: flex-end;
+            position: relative;
+            justify-content: space-evenly;
+            align-self: center;
+            display: flex;
+            flex-direction: row;
+            width: 60vw;
+
+            &_home {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &_popular {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &_contact {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+           a {
+               color: white;
+               text-decoration: none;
+               font-size: 25px;
+           }
+        }
+    }
+}
+
+.list__home__img {
+    max-width: 25px;
+    margin-right: 5px;
+}
+.list__home__pop {
+    max-width: 25px;
+    max-height: 25px;
+    margin-right: 5px;
+}
+.list__home__con {
+    max-width: 25px;
+    max-height: 25px;
+    margin-right: 5px;
+}
