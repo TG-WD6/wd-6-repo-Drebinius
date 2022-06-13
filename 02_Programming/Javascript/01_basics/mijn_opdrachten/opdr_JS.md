@@ -60,12 +60,19 @@ ____
     4. *computer says no..* console geeft "false" weer.
 
     5. 5        : false
+
        Boolean  : false
+
        false    : true
+
        "false"  : false
+
        true     : false
+
        "true"   : false
+
        null     : true
+       
        undefined: true
 
     6. `+=` voegt de volgende value toe aan de voorstaande, en herberekent daarna de (final)value. Deze werkt ook op strings.
