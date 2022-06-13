@@ -72,7 +72,11 @@ ____
     `x += y` kan langer geschreven worden  als `x = x + y`
 
     7.  `-=` :         aftrekken>herbereken
+
         `*=` :  vermenigvuldigen>herbereken
+
         `/=` :             delen>herbereken
+
         `%=` :         remainder>herbereken
+        
         `**=`:  machtsverheffing>herbereken
