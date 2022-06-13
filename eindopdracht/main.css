@@ -14,7 +14,8 @@ body {
 .banner {
   background-color: rgb(47, 18, 95);
   display: flex;
-  position: absolute;
+  position: fixed;
+  top: 0%;
   width: 100vw;
   z-index: 2;
 }
@@ -84,6 +85,10 @@ body {
   margin-right: 5px;
 }
 
+.login {
+  margin-top: 1%;
+}
+
 .login__form {
   display: flex;
   flex-direction: column;
@@ -105,7 +110,7 @@ body {
   border-radius: 10%;
 }
 
-.main {
+.pcards {
   display: flex;
   width: 100vw;
   height: 600px;
