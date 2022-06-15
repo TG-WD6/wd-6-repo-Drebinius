@@ -87,3 +87,35 @@ ____
         `%=` :         remainder>herbereken
         
         `**=`:  machtsverheffing>herbereken
+____
+ ### Opdracht 2.2
+____
+____
+
+    1. waardes worden omgewisseld van hoog naar laag
+
+    2. Geeft [empty string] weer
+
+    3. lijkt de hele string te returnen
+
+    4. 'telt' van rechts naar links
+____
+## Conditions - Opdrachten
+____
+### Opdracht 3.1
+____
+
+1. `==` **equality**(for all) compare value en `===` **strict equality** compare value/type
+
+2. `>` greater than. heeft left operand hogere value than right operand?
+            `5 > 3=true`
+
+    `>=` greater than or equal. heeft left operand gelijke/hogere value   dan right operand?
+            `3 >= 3=true`
+
+    `<` less than. heeft left operand een lagere value dan right operand?
+            `3 < 5=true`
+
+    `=<` less than or equal. heeft left operand een gelijke/lagere value dan right operand?
+            `5 =< 3 =false`
+
