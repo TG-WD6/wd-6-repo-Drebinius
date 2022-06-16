@@ -418,7 +418,7 @@ We oefenen nog wat extra met grotere If/Else blokken, Switch/case en Ternary Ope
 
 	Andere getallen loggen (“Geen geldige maand!”).
 
-4. Bouw nu opdracht C met een Switch/case.
+4. Bouw nu opdracht 3 met een Switch/case.
 
 Gegeven de volgende code:
 

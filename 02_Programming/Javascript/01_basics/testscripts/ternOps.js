@@ -1,4 +1,4 @@
-let someNumber = 2;
+let someNumber = 1;
 
 someNumber == 6 ? console.log(someNumber + " is 6") : console.log(someNumber + " is not 6")
 

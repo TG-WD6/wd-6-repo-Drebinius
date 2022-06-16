@@ -2,7 +2,7 @@
 
 ## Variables & Datatypes - Opdrachten
 ____
-### Opdracht 1.1
+### Opdracht 1.1.
 ____
 ____
 #### a)
@@ -30,7 +30,7 @@ ____
 **Resultaat:** alles wordt weergegeven in de console
 
 ____
-### Opdracht 1.2
+### Opdracht 1.2.
 ____
 ____
 1. *Consolecius says*: This is a string, with the value: Number. 
@@ -102,7 +102,7 @@ ____
 ____
 ## Conditions - Opdrachten
 ____
-### Opdracht 3.1
+### Opdracht 3.1.
 ____
 
 1. `==` **equality**(for all) compare value en `===` **strict equality** compare value/type
@@ -116,6 +116,15 @@ ____
     `<` less than. heeft left operand een lagere value dan right operand?
             `3 < 5=true`
 
-    `=<` less than or equal. heeft left operand een gelijke/lagere value dan right operand?
-            `5 =< 3 =false`
+    `<=` less than or equal. heeft left operand een gelijke/lagere value dan right operand?
+            `5 <= 3 =false`
 
+____
+### Opdracht 3.2.
+____
+
+1. zie script
+
+2. #4 wordt niet herkend door de if/else. de larger than 4 overruled de larger than 11 als dit geldt voor het ingevoerde nummer
+
+3. 
