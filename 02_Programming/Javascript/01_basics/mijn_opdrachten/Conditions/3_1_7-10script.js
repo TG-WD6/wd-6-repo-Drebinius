@@ -1,28 +1,18 @@
-let firstValue = 5;
 
-// switch (firstValue) {
+
+// switch (firstValue) { oops no switchy
 //         case (firstValue > 5): 
 // } 
 
+let firstValue = 40;
 
 
-if (firstValue >= 5)  {
+if (firstValue >= 5 && firstValue <= 10) {
         console.log('between 5 and 10');
-
-// if ((firstValue >= 5) + (firstValue =< 10)) {
-//         console.log('between 5 and 10');
-// } else if (firstValue)
-
- 
-
-// Log het in je console als de waarde 
-//////groter dan 5 EN kleiner dan 10 is.
-// Zo niet, log dan in je console als de waarde 
-//////11 of groter EN 20 of kleiner is.
-// Zo niet, log dan in je console als de waarde
-//////// 21 of 23 is.
-// Zo niet, log dan in je console als de waarde
-////// kleiner dan 35 OF tussen de 40 en 45 is.
-// Test of je bij alle uitkomsten kan komen. 
-///Verandert er iets als je alle If/Else omzet
-// in aparte If blokken?
+} else if (firstValue >= 11 && firstValue <= 20) {
+                console.log("between 11 and 20");
+} else if (firstValue == 21 || firstValue == 23) {
+                console.log("is either 21 or 23")
+} else if (firstValue < 35 || firstValue >= 40 && firstValue <= 45) {
+                console.log("either <35 or between 40-45")
+}
