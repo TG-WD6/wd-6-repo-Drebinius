@@ -1,0 +1,16 @@
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif, monospace;
+}
+
+body {
+    background-color: #dadada;
+    width: 100vw;
+    height: 5000px;
+    overflow-x: hidden;
+}

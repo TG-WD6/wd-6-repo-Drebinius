@@ -1,0 +1,27 @@
+.login {
+    margin-top: 15vh;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img__container {
+    text-align: center;
+
+    img {
+        border-radius: 10%;
+    }
+}

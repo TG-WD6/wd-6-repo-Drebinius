@@ -1,0 +1,91 @@
+.banner {
+    background-color: $color__banner;
+    display: flex;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    justify-content: space-between;
+    width: 100vw;
+    padding-left: 20px;
+    padding-right: 50px;
+    margin: 0 auto;
+    z-index: 2;
+
+    &__logo {
+        display: flex;
+        justify-content: flex-start;
+        width: auto;
+        align-self: center;
+        padding: 10px;
+        z-index: 99;
+
+        // margin-left: 1%;
+        &__img {
+            max-width: 250px;
+            margin-top: 1%;
+        }
+    }
+
+    &__navbar {
+        display: flex;
+        // flex-direction: row;
+        position: relative;
+        overflow: hidden;
+        justify-content: space-between;
+        // height: auto;
+        padding: 10px;
+        width: 40vw;
+        height: 6em;
+
+        &__list {
+            // justify-self: flex-end;
+            // position: relative;
+            display: grid;
+            
+            // justify-content: space-evenly;
+            // align-self: center;
+
+            // flex-direction: row;
+            // width: 60vw;
+
+            &_home {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &_popular {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &_contact {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+           a {
+               color: white;
+               text-decoration: none;
+               font-size: 25px;
+           }
+        }
+    }
+}
+
+.list__home__img {
+    max-width: 25px;
+    margin-right: 5px;
+}
+.list__home__pop {
+    max-width: 25px;
+    max-height: 25px;
+    margin-right: 5px;
+}
+.list__home__con {
+    max-width: 25px;
+    max-height: 25px;
+    margin-right: 5px;
+}

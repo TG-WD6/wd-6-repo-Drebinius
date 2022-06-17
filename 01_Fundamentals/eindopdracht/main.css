@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  font-family: sans-serif, monospace;
+}
+
+body {
+  background-color: #dadada;
+  width: 100vw;
+  height: 5000px;
+  overflow-x: hidden;
+}
+
+.banner {
+  background-color: rgb(47, 18, 95);
+  display: flex;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  justify-content: space-between;
+  width: 100vw;
+  padding-left: 20px;
+  padding-right: 50px;
+  margin: 0 auto;
+  z-index: 2;
+}
+.banner__logo {
+  display: flex;
+  justify-content: flex-start;
+  width: auto;
+  align-self: center;
+  padding: 10px;
+  z-index: 99;
+}
+.banner__logo__img {
+  max-width: 250px;
+  margin-top: 1%;
+}
+.banner__navbar {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  justify-content: space-between;
+  padding: 10px;
+  width: 40vw;
+  height: 6em;
+}
+.banner__navbar__list {
+  display: grid;
+}
+.banner__navbar__list_home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner__navbar__list_popular {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner__navbar__list_contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner__navbar__list a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.list__home__img {
+  max-width: 25px;
+  margin-right: 5px;
+}
+
+.list__home__pop {
+  max-width: 25px;
+  max-height: 25px;
+  margin-right: 5px;
+}
+
+.list__home__con {
+  max-width: 25px;
+  max-height: 25px;
+  margin-right: 5px;
+}
+
+.login {
+  margin-top: 15vh;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img__container {
+  text-align: center;
+}
+.img__container img {
+  border-radius: 10%;
+}
+
+.pcards {
+  display: flex;
+  width: 100vw;
+  height: 600px;
+}
+
+.mobile__nav {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  min-height: 75vh;
+  z-index: 98;
+  display: block;
+}/*# sourceMappingURL=main.css.map */
