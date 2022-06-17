@@ -1,0 +1,29 @@
+//opdracht 1 mixin, no idea where else to place
+//nu in eigen _mixins. idea where to place after all.
+@mixin button-style01(){
+    color: rgb(66, 199, 54);
+    background-color: rgb(123, 125, 131);
+    border: 1px solid rgb(123, 125, 131);
+
+    &:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgb(67, 68, 70);
+    }
+    &:active {
+        animation: beyblade 3s alternate infinite ease-in-out;
+        color: rgb(255, 105, 180);
+        background-color: rgb(0, 0, 0);
+        border: 1px solid rgb(255, 105, 180);
+    }
+    
+}
+//opdracht 2 kleurovergang on hover
+@mixin squarething (){
+    background-color: $primary-color;
+
+    &:hover{
+        // background-color: $secondary-color; 
+        // transition: all 2s;//-----------------kleurovergang dmv _mixin
+      animation: clrchng 2s alternate infinite; //kleurovergang on hover dmv _mixin& _keyframe
+    }
+}
