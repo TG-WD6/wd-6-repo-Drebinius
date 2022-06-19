@@ -19,20 +19,20 @@
         <nav class="banner__navbar">
             <div class="banner__navbar__list">
                 <!--niet hier burgeren-->
-                <div class="banner__navbar__list--home">
-                    <img class="list__home--img" src="./images/house.svg">
+                <div class="banner__navbar__list__home">
+                    <img class="list__home__img" src="./images/house.svg">
                     <a href="#" target="_self" title="home">Home</a>
                 </div>
-                <div class="banner__navbar__list--popular">
-                    <img class="list__home--pop" src="./images/graph-up.svg">
+                <div class="banner__navbar__list__popular">
+                    <img class="list__home__pop" src="./images/graph-up.svg">
                     <a href="#" target="_self" title="popular">Popular</a>
                 </div>
-                <div class="banner__navbar__list--contact">
-                    <img class="list__home--con" src="./images/pin.svg">
+                <div class="banner__navbar__list__contact">
+                    <img class="list__home__con" src="./images/pin.svg">
                     <a href="#" target="_self" title="contact">Contact</a>
                 </div>
             </div>
-            
+
             <!--welcome to the burgerzone-->
             <button class="hamburger">
                 <div class="bar"></div>
@@ -85,50 +85,78 @@
     </section>
     <!-- login section end -->
     <!-- product cards start -->
-    <section id="pcards" class="pcards">
+    <section id="products" class="pcards">
 
         <div class="pcards__box">
 
-            <div class="pcards__box--card1">
-                <figure class="box__image">
-                    <img src="./images/165x165.png" alt="" class="pcard1__image">
+            <div class="pcards__box__card__one">
+                <figure class="card__one__image">
+                    <img src="./images/165x165.png" alt="" class="pcard__one__image">
                 </figure>
-                <div class="box__text">
-                    <h5 class="box__text--titleupp">title</h5>
-                    <h4 class="box__text--titlelow">subtitle bold</h4>
-                    <p class="box__text--prdcttxt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eligendi vitae qui! Eaque nisi
+                <div class="card__one__text card__text">
+                    <p class="card__one__text titleUpp">title</p>
+                    <h4 class="card__one__text titleLow">subtitle bold</h4>
+                    <p class="card__one__text prdctTxt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                        eligendi vitae qui! Eaque nisi
                         deleniti optio impedit sapiente, quas veniam magnam esse id voluptatibus. Architecto quaerat
                         quas expedita ad voluptatem?</p>
                 </div>
-                <div class="box__prch">
-                    <span class="box__prch--price">99,<sup class="box__prch--price-fr">99</sup>
+                <div class="card__one__mng">
+                    <div class="card__one__price__box price__box">
+                        <!-- <span class="card__one__mng--main">99,<span><sup class="card__one__mng--main-fr">99</sup></span></span> -->
+                        <span class="card__one__price">99,<sup>99</sup></span>
+
+                    </div>
+                    <p>Voor 23:59 besteld, morgen in huis</p>
+                    <div class="card__one__mng__bttn">
+                        <a href="" class="button__basket--add"><img src="./images/cart-add-buy.svg"></a>
+                        <a href="" class="button__basket--fav"><img src="./images/heart.svg"></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="pcards__box__card__two">
+                <figure class="card__two__image">
+                    <img src="./images/165x165.png" alt="" class="pcard__two__image">
+                </figure>
+                <div class="card__two__text card__text">
+                    <h5 class="card__two__text__titleupp">title</h5>
+                    <h4 class="card__two__text__titlelow">subtitle bold</h4>
+                    <p class="card__two__text__prdcttxt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                        eligendi vitae qui! Eaque nisi
+                        deleniti optio impedit sapiente, quas veniam magnam esse id voluptatibus. Architecto quaerat
+                        quas expedita ad voluptatem?</p>
+                </div>
+                <div class="card__two__prch">
+                    <span class="card__two__prch--price">99,<sup class="card__two__prch--price-fr">99</sup>
                     </span>
                 </div>
             </div>
 
-            <div class="pcards__container--card2">
-                <figure class="image__box">
-                    <img src="./images/165x165.png" alt="" class="pcard2__image">
+
+            <div class="pcards__box__card__three">
+                <figure class="card__three__image">
+                    <img src="./images/165x165.png" alt="" class="pcard__three__image">
                 </figure>
-                <div class="text__box">
-
+                <div class="card__three__text card__text">
+                    <h5 class="card__three__text__titleupp">title</h5>
+                    <h4 class="card__three__text__titlelow">subtitle bold</h4>
+                    <p class="card__three__text__prdcttxt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                        eligendi vitae qui! Eaque nisi
+                        deleniti optio impedit sapiente, quas veniam magnam esse id voluptatibus. Architecto quaerat
+                        quas expedita ad voluptatem?</p>
                 </div>
-                <div class="price__box">
-
+                <div class="card__three__prch">
+                    <span class="card__three__prch--price">99,<sup class="card__three__prch--price-fr">99</sup>
+                    </span>
                 </div>
             </div>
 
-            <div class="pcards__container--card3">
-                <figure class="image__box">
-                    <img src="./images/165x165.png" alt="" class="pcard3__image">
-                </figure>
-                <div class="text__box">
 
-                </div>
-                <div class="price__box">
 
-                </div>
-            </div>
+
+
 
         </div>
 

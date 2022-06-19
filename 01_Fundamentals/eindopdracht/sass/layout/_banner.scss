@@ -54,19 +54,19 @@
             // flex-direction: row;
             // width: 60vw;
 
-            &--home {
+            &__home {
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
 
-            &--popular {
+            &__popular {
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
 
-            &--contact {
+            &__contact {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -83,17 +83,17 @@
 
 .list__home {
     
-    &--img {
+    &__img {
         max-width: 25px;
         max-height: 22px;
         margin-right: 5px;
         }
-    &--pop {
+    &__pop {
         max-width: 25px;
         max-height: 25px;
         margin-right: 5px;
         }
-    &--con {
+    &__con {
         max-width: 20px;
         max-height: 20px;
         // margin-right: 5px;
