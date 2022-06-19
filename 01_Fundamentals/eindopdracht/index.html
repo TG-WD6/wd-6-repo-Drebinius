@@ -17,33 +17,35 @@
                 alt="Techgrounds logo"></a>
 
         <nav class="banner__navbar">
-            <div class="banner__navbar__list"><!--niet hier burgeren-->
-                <div class="banner__navbar__list_home">
-                    <img class="list__home__img" src="./images/home-solid.svg">
+            <div class="banner__navbar__list">
+                <!--niet hier burgeren-->
+                <div class="banner__navbar__list--home">
+                    <img class="list__home--img" src="./images/house.svg">
                     <a href="#" target="_self" title="home">Home</a>
                 </div>
-                <div class="banner__navbar__list_popular">
-                    <img class="list__home__pop" src="./images/heart-solid.svg">
+                <div class="banner__navbar__list--popular">
+                    <img class="list__home--pop" src="./images/graph-up.svg">
                     <a href="#" target="_self" title="popular">Popular</a>
                 </div>
-                <div class="banner__navbar__list_contact">
-                    <img class="list__home__con" src="./images/map-pin-solid.svg">
+                <div class="banner__navbar__list--contact">
+                    <img class="list__home--con" src="./images/pin.svg">
                     <a href="#" target="_self" title="contact">Contact</a>
                 </div>
             </div>
-
-          <button class="hamburger">
-              <div class="bar"></div>
-          </button> 
+            
+            <!--welcome to the burgerzone-->
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
         </nav>
         <nav class="mobile__nav">
-            <div class="banner__navbar__list_home">
+            <div class="mobile__navbar__list_home">
                 <a href="#" target="_self" title="home">Home</a>
             </div>
-            <div class="banner__navbar__list_popular">
+            <div class="mobile__navbar__list_popular">
                 <a href="#" target="_self" title="popular">Popular</a>
             </div>
-            <div class="banner__navbar__list_contact">
+            <div class="mobile__navbar__list_contact">
                 <a href="#" target="_self" title="contact">Contact</a>
             </div>
         </nav>
@@ -55,41 +57,75 @@
     <section class="login">
         <form class="login__form">
 
-            <div class="img__container">
+            <div class="img__box">
                 <img src="./images/avatar.png" alt="Avatar" class="avatar">
-                <h1 class="img__container__title">Login</h1>
-                <p class="img__container__desc">Login with your email</p>
+                <h1 class="img__box__title">Login</h1>
+                <p class="img__box__desc">Login with your email</p>
             </div>
 
-            <div class="container">
+            <div class="box__input">
                 <label for="email"><b></b></label>
-                <input type="text" placeholder="Email" name="email" required>
+                <input class="input__login" type="text" placeholder="Email" name="email" required>
 
                 <label for="psw"><b></b></label>
-                <input type="password" placeholder="Password" name="psw" required>
-                <div class="container__aside">
+                <input class="input__login" type="password" placeholder="Password" name="psw" required>
+                <div class="box__aside">
                     <label>
                         <input type="checkbox" name="remember"> Remember me
                     </label>
                     <span class="psw"><a href="#">Forgot password?</a></span>
                 </div>
-                <button type="submit">Login</button>
+                <div class="button__holder">
+                    <button id="login__button" type="submit">LOGIN</button>
+                    <span class="button__icon"></span>
+                </div>
             </div>
 
         </form>
     </section>
     <!-- login section end -->
     <!-- product cards start -->
-    <section class="pcards">
-        <div class="pcards__container">
-            <div class="card__one">
-                <div class="card__one--img">
+    <section id="pcards" class="pcards">
+
+        <div class="pcards__box">
+
+            <div class="pcards__box--card1">
+                <figure class="box__image">
+                    <img src="./images/165x165.png" alt="" class="pcard1__image">
+                </figure>
+                <div class="box__text">
+                    <h5 class="box__text--titleupp">title</h5>
+                    <h4 class="box__text--titlelow">subtitle bold</h4>
+                    <p class="box__text--prdcttxt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eligendi vitae qui! Eaque nisi
+                        deleniti optio impedit sapiente, quas veniam magnam esse id voluptatibus. Architecto quaerat
+                        quas expedita ad voluptatem?</p>
+                </div>
+                <div class="box__prch">
+                    <span class="box__prch--price">99,<sup class="box__prch--price-fr">99</sup>
+                    </span>
+                </div>
+            </div>
+
+            <div class="pcards__container--card2">
+                <figure class="image__box">
+                    <img src="./images/165x165.png" alt="" class="pcard2__image">
+                </figure>
+                <div class="text__box">
 
                 </div>
-                <div class="card__one--desc">
+                <div class="price__box">
 
                 </div>
-                <div class="card__one--prch">
+            </div>
+
+            <div class="pcards__container--card3">
+                <figure class="image__box">
+                    <img src="./images/165x165.png" alt="" class="pcard3__image">
+                </figure>
+                <div class="text__box">
+
+                </div>
+                <div class="price__box">
 
                 </div>
             </div>

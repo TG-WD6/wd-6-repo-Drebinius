@@ -1,0 +1,25 @@
+.pcards {
+    display: grid;
+    border: thin black solid;
+    margin-top: 15vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+
+}
+
+.pcards__box {
+    display: grid;
+    // border: thin black solid;
+    // margin-top: 15%;
+    // margin-left: 5vw;
+    // margin-right: 5vw;
+    // width: 90vw;
+    gap: 5px;
+    margin: 5px;
+
+        &--card1 {
+            display: flex;            
+            align-items: center;
+        }
+}

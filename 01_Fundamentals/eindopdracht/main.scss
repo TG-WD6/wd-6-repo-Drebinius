@@ -1,8 +1,7 @@
 //fonts
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap');
 //utilities
-@import "./sass/utils/resets";
 @import "./sass/utils/variables";
+@import "./sass/utils/resets";
 @import "./sass/utils/mixins";
 //components
 //layout
@@ -118,20 +117,20 @@
 // }
 
 //header end
-.pcards {
-    display: flex;
-    width: 100vw;
-    height: 600px;
-}
+// .pcards {
+//     display: flex;
+//     width: 100vw;
+//     height: 600px;
+// }
 
 .mobile__nav {
     position: fixed;
     top: 0%;
     left: 0%;
     width: 100%;
-    min-height: 75vh;
+    // min-height: 75vh;
     z-index: 98;
     display: block;
 }
 
-@media (min-width: 740px){.banner__navbar__list{}}
+// @media (min-width: 740px){.banner__navbar__list{}}

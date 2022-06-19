@@ -2,6 +2,22 @@
     margin-top: 15vh;
 }
 
+input[type=text],
+[type=password] {
+    width: 260px;
+    height: 30px;
+    padding: 0;
+    margin-top: 5px;
+    outline: none;
+    border: none;
+    border-bottom: thin black solid;
+    background-color: $color__main;
+
+    &[type=password] {
+        margin-bottom: 5px;
+    }
+}
+
 .login__form {
     display: flex;
     flex-direction: column;
@@ -10,18 +26,87 @@
 
 }
 
-.container {
+.box__input {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
+    & a {
+        text-decoration: none;
+    }
+
 }
 
-.img__container {
+.img__box {
     text-align: center;
 
     img {
         border-radius: 10%;
+    }
+
+    &__desc {
+        font-weight: 50;
+    }
+}
+
+.button__holder {
+    display: flex;
+    flex-direction: row-reverse;
+    // grid-template-rows: none;
+    // grid-template-columns: auto;
+    // justify-content: center;
+    // grid-template-columns: repeat(2, auto);
+    margin-top: 5px;
+    border: 0;
+    width: 260px;
+    height: 40px;
+    background-color: rgb(34, 17, 194);
+        &:hover {
+            cursor: pointer;
+        background-color: rgba(17, 153, 194, 1);
+        transition: all 0.2s ease-out;
+    }
+
+        
+
+}
+
+.button__icon {
+    display: flex;
+    flex-shrink: 1;
+    background-image: url(/01_Fundamentals/eindopdracht/images/login.svg);
+    background-repeat: no-repeat;
+    width: 30px;
+    margin-top: 7px;
+    margin-left: 10px;
+
+    // height: 50px;
+    // float: left;
+}
+
+#login__button {
+    // display: flex;
+    flex-grow: 2;
+    // justify-content: center;
+    // align-items: center;
+    margin-top: 0px;
+    border: 0;
+    font-size: x-large;
+    font-weight: 400;
+    // text-transform: full-width;
+    // width: 260px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(34, 17, 194, 0.0);
+    // padding: 12px 16px;
+    // border-radius: %;
+
+    &:hover {
+        cursor: pointer;
+    }
+    &:active {
+        cursor: pointer;
+        background-color: rgb(57, 185, 224);
+        transition: all 0.2s ease-out;
     }
 }

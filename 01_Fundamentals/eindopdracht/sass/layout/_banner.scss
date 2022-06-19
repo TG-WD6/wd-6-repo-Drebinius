@@ -27,20 +27,26 @@
     }
 
     &__navbar {
-        display: flex;
-        // flex-direction: row;
-        position: relative;
-        overflow: hidden;
-        justify-content: space-between;
-        // height: auto;
-        padding: 10px;
-        width: 40vw;
-        height: 6em;
+        // display: flex;
+        // // flex-direction: row;
+        // position: relative;
+        // overflow: hidden;
+        // justify-content: space-between;
+        // // height: auto;
+        // padding: 10px;
+        // width: 40vw;
+        // height: 6em;
+        display: grid;
+        // grid-gap: 24px;
+        grid-template-columns: repeat(3, auto);
+        
 
         &__list {
             // justify-self: flex-end;
             // position: relative;
             display: grid;
+            grid-gap: 50px;
+            grid-template-columns: repeat(3, auto);
             
             // justify-content: space-evenly;
             // align-self: center;
@@ -48,19 +54,19 @@
             // flex-direction: row;
             // width: 60vw;
 
-            &_home {
+            &--home {
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
 
-            &_popular {
+            &--popular {
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
 
-            &_contact {
+            &--contact {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -69,23 +75,27 @@
            a {
                color: white;
                text-decoration: none;
-               font-size: 25px;
+               font-size: 22px;
            }
         }
     }
 }
 
-.list__home__img {
-    max-width: 25px;
-    margin-right: 5px;
-}
-.list__home__pop {
-    max-width: 25px;
-    max-height: 25px;
-    margin-right: 5px;
-}
-.list__home__con {
-    max-width: 25px;
-    max-height: 25px;
-    margin-right: 5px;
+.list__home {
+    
+    &--img {
+        max-width: 25px;
+        max-height: 22px;
+        margin-right: 5px;
+        }
+    &--pop {
+        max-width: 25px;
+        max-height: 25px;
+        margin-right: 5px;
+        }
+    &--con {
+        max-width: 20px;
+        max-height: 20px;
+        // margin-right: 5px;
+    }    
 }

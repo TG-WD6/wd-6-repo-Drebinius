@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap");
 *,
 *::after,
 *::before {
@@ -9,7 +8,7 @@
 }
 
 body {
-  background-color: #dadada;
+  background-color: white;
   width: 100vw;
   height: 5000px;
   overflow-x: hidden;
@@ -41,28 +40,25 @@ body {
   margin-top: 1%;
 }
 .banner__navbar {
-  display: flex;
-  position: relative;
-  overflow: hidden;
-  justify-content: space-between;
-  padding: 10px;
-  width: 40vw;
-  height: 6em;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
 }
 .banner__navbar__list {
   display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(3, auto);
 }
-.banner__navbar__list_home {
+.banner__navbar__list--home {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.banner__navbar__list_popular {
+.banner__navbar__list--popular {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.banner__navbar__list_contact {
+.banner__navbar__list--contact {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,28 +66,42 @@ body {
 .banner__navbar__list a {
   color: white;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 22px;
 }
 
-.list__home__img {
+.list__home--img {
   max-width: 25px;
+  max-height: 22px;
   margin-right: 5px;
 }
-
-.list__home__pop {
-  max-width: 25px;
-  max-height: 25px;
-  margin-right: 5px;
-}
-
-.list__home__con {
+.list__home--pop {
   max-width: 25px;
   max-height: 25px;
   margin-right: 5px;
+}
+.list__home--con {
+  max-width: 20px;
+  max-height: 20px;
 }
 
 .login {
   margin-top: 15vh;
+}
+
+input[type=text],
+[type=password] {
+  width: 260px;
+  height: 30px;
+  padding: 0;
+  margin-top: 5px;
+  outline: none;
+  border: none;
+  border-bottom: thin black solid;
+  background-color: white;
+}
+input[type=text][type=password],
+[type=password][type=password] {
+  margin-bottom: 5px;
 }
 
 .login__form {
@@ -101,24 +111,86 @@ body {
   align-items: center;
 }
 
-.container {
+.box__input {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.box__input a {
+  text-decoration: none;
+}
 
-.img__container {
+.img__box {
   text-align: center;
 }
-.img__container img {
+.img__box img {
   border-radius: 10%;
+}
+.img__box__desc {
+  font-weight: 50;
+}
+
+.button__holder {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 5px;
+  border: 0;
+  width: 260px;
+  height: 40px;
+  background-color: rgb(34, 17, 194);
+}
+.button__holder:hover {
+  cursor: pointer;
+  background-color: rgb(17, 153, 194);
+  transition: all 0.2s ease-out;
+}
+
+.button__icon {
+  display: flex;
+  flex-shrink: 1;
+  background-image: url(/01_Fundamentals/eindopdracht/images/login.svg);
+  background-repeat: no-repeat;
+  width: 30px;
+  margin-top: 7px;
+  margin-left: 10px;
+}
+
+#login__button {
+  flex-grow: 2;
+  margin-top: 0px;
+  border: 0;
+  font-size: x-large;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  background-color: rgba(34, 17, 194, 0);
+}
+#login__button:hover {
+  cursor: pointer;
+}
+#login__button:active {
+  cursor: pointer;
+  background-color: rgb(57, 185, 224);
+  transition: all 0.2s ease-out;
 }
 
 .pcards {
+  display: grid;
+  border: thin black solid;
+  margin-top: 15vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  width: 90vw;
+}
+
+.pcards__box {
+  display: grid;
+  gap: 5px;
+  margin: 5px;
+}
+.pcards__box--card1 {
   display: flex;
-  width: 100vw;
-  height: 600px;
+  align-items: center;
 }
 
 .mobile__nav {
@@ -126,7 +198,6 @@ body {
   top: 0%;
   left: 0%;
   width: 100%;
-  min-height: 75vh;
   z-index: 98;
   display: block;
 }/*# sourceMappingURL=main.css.map */
