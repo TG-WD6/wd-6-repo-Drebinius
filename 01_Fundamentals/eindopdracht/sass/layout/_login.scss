@@ -41,29 +41,39 @@ input[type=text],
 .img__box {
     text-align: center;
 
-    img {
+    .avatar {
         border-radius: 10%;
-    }
+     }
+    
 
     &__desc {
         font-weight: 50;
     }
 }
+.avatar__box {
+    width: 250px;
+    height: 250px;
+    border: 1px solid rgba(32, 32, 32, 0.1);
+    border-radius: 10%;
+    background-image: url(/01_Fundamentals/eindopdracht/images/avatar.png);
+    
+            &:hover {
+                background-image: url(/01_Fundamentals/eindopdracht/images/assuming_control.png);
+                transition: all 1.5s ease-in 1s;
+            }
+}
+
 
 .button__holder {
     display: flex;
     flex-direction: row-reverse;
-    // grid-template-rows: none;
-    // grid-template-columns: auto;
-    // justify-content: center;
-    // grid-template-columns: repeat(2, auto);
     margin-top: 5px;
     border: 0;
     width: 260px;
     height: 40px;
     background-color: #2211c2;
         &:hover {
-            cursor: pointer;
+        cursor: pointer;
         background-color: rgba(17, 153, 194, 1);
         transition: all 0.2s ease-out;
     }

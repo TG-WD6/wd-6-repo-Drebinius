@@ -10,7 +10,7 @@
 body {
   background-color: white;
   width: 100vw;
-  height: 5000px;
+  height: 2000px;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -126,11 +126,23 @@ input[type=text][type=password],
 .img__box {
   text-align: center;
 }
-.img__box img {
+.img__box .avatar {
   border-radius: 10%;
 }
 .img__box__desc {
   font-weight: 50;
+}
+
+.avatar__box {
+  width: 250px;
+  height: 250px;
+  border: 1px solid rgba(32, 32, 32, 0.1);
+  border-radius: 10%;
+  background-image: url(/01_Fundamentals/eindopdracht/images/avatar.png);
+}
+.avatar__box:hover {
+  background-image: url(/01_Fundamentals/eindopdracht/images/assuming_control.png);
+  transition: all 1.5s ease-in 1s;
 }
 
 .button__holder {
@@ -178,7 +190,6 @@ input[type=text][type=password],
 
 .pcards {
   display: grid;
-  border: thin black solid;
   margin-top: 15vh;
   margin-left: 5vw;
   margin-right: 5vw;
@@ -192,10 +203,14 @@ input[type=text][type=password],
 
 .card__one__image {
   flex-grow: 1;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
 .price__box {
   display: flex;
+  position: relative;
+  top: 20px;
 }
 
 .card__one__price {
@@ -210,9 +225,9 @@ input[type=text][type=password],
 }
 .card__one__price sup {
   position: relative;
-  top: -4px;
+  top: -5px;
   left: -6px;
-  font-size: 0.9375rem;
+  font-size: 0.95rem;
   line-height: inherit;
 }
 
@@ -224,6 +239,7 @@ input[type=text][type=password],
   flex-grow: 1;
   min-width: 165px;
   min-height: 165px;
+  margin-right: 5px;
 }
 .card__one__mng p {
   color: green;
@@ -240,22 +256,32 @@ input[type=text][type=password],
   display: flex;
   width: 70px;
   height: 40px;
-  background-color: yellow;
+  background-color: rgb(255, 212, 21);
+  box-shadow: 3px 2px 3px 1px;
   justify-content: center;
+  background-image: url(/01_Fundamentals/eindopdracht/images/cart-add-buy.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.button__basket--add img {
-  width: 2rem;
+.button__basket--add:hover {
+  background-color: rgb(255, 232, 41);
 }
 
 .button__basket--fav {
   display: flex;
-  max-width: 25px;
-  max-height: 40px;
+  width: 25px;
+  height: 40px;
   margin-right: 1.5rem;
   justify-content: center;
+  background-image: url(/01_Fundamentals/eindopdracht/images/heart.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.button__basket--fav img {
-  width: 2.5rem;
+.button__basket--fav:active, .button__basket--fav:hover {
+  background-image: url(/01_Fundamentals/eindopdracht/images/heart-solid.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.2s;
 }
 
 .pcards__box {
@@ -263,10 +289,12 @@ input[type=text][type=password],
   padding: 10px;
   gap: 5px;
 }
-.pcards__box__card__one, .pcards__box__card__two, .pcards__box__card__three {
+.pcards__box__card__one {
+  gap: 5px;
   display: flex;
   align-items: center;
   flex-direction: row;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
 }
 
 .mobile__nav {
