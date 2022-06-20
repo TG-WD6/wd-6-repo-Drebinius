@@ -56,10 +56,8 @@ input[type=text],
     border: 1px solid rgba(32, 32, 32, 0.1);
     border-radius: 10%;
     background-image: url(/01_Fundamentals/eindopdracht/images/avatar.png);
-    
-            &:hover {
+                &:hover {
                 background-image: url(/01_Fundamentals/eindopdracht/images/assuming_control.png);
-                transition: all 1.5s ease-in 1s;
             }
 }
 
@@ -115,8 +113,9 @@ input[type=text],
         cursor: pointer;
     }
     &:active {
-        cursor: pointer;
-        background-color: rgb(57, 185, 224);
         transition: all 0.2s ease-out;
+        cursor: pointer;
+        background-color: rgb(26, 151, 21);
+        
     }
 }

@@ -1,16 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500&display=swap");
+@font-face {
+  font-family: robotoCon;
+  src: url(/01_Fundamentals/eindopdracht/fonts/RobotoCondensed-Regular.ttf);
+}
+@font-face {
+  font-family: robotoConBold;
+  src: url(/01_Fundamentals/eindopdracht/fonts/RobotoCondensed-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: robotoConLight;
+  src: url(/01_Fundamentals/eindopdracht/fonts/RobotoCondensed-Light.ttf);
+  font-weight: light;
+}
 *,
 *::after,
 *::before {
   box-sizing: border-box;
   margin: 0%;
   padding: 0%;
-  font-family: "Andale Mono", sans-serif, monospace;
+  font-family: robotoCon, sans-serif, monospace;
 }
 
 body {
   background-color: white;
   width: 100vw;
-  height: 2000px;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -142,7 +156,6 @@ input[type=text][type=password],
 }
 .avatar__box:hover {
   background-image: url(/01_Fundamentals/eindopdracht/images/assuming_control.png);
-  transition: all 1.5s ease-in 1s;
 }
 
 .button__holder {
@@ -183,9 +196,9 @@ input[type=text][type=password],
   cursor: pointer;
 }
 #login__button:active {
-  cursor: pointer;
-  background-color: rgb(57, 185, 224);
   transition: all 0.2s ease-out;
+  cursor: pointer;
+  background-color: rgb(26, 151, 21);
 }
 
 .pcards {
@@ -198,7 +211,9 @@ input[type=text][type=password],
 .pcards .card__text {
   flex-grow: 2;
   margin-left: 5px;
-  text-decoration: none;
+}
+.pcards .card__text .prdctTxt {
+  font-family: robotoCon;
 }
 
 .card__one__image {
@@ -226,8 +241,15 @@ input[type=text][type=password],
 .card__one__price sup {
   position: relative;
   top: -5px;
-  left: -6px;
+  left: -8px;
   font-size: 0.95rem;
+  line-height: inherit;
+}
+.card__one__price__sep {
+  position: relative;
+  top: -3px;
+  left: -2px;
+  font-size: 1.5rem;
   line-height: inherit;
 }
 
@@ -243,7 +265,8 @@ input[type=text][type=password],
 }
 .card__one__mng p {
   color: green;
-  font-size: 10px;
+  font-size: 11px;
+  font-family: robotoCon;
 }
 
 .card__one__mng__bttn {
@@ -266,6 +289,11 @@ input[type=text][type=password],
 .button__basket--add:hover {
   background-color: rgb(255, 232, 41);
 }
+.button__basket--add:active {
+  transition: all 0.3s ease;
+  background-color: #2bc226;
+  box-shadow: 3px 2px 3px 1px rgb(23, 100, 21);
+}
 
 .button__basket--fav {
   display: flex;
@@ -278,10 +306,10 @@ input[type=text][type=password],
   background-position: center;
 }
 .button__basket--fav:active, .button__basket--fav:hover {
+  transition: all 0.3s ease;
   background-image: url(/01_Fundamentals/eindopdracht/images/heart-solid.svg);
   background-repeat: no-repeat;
   background-position: center;
-  transition: all 0.2s;
 }
 
 .pcards__box {
@@ -295,6 +323,51 @@ input[type=text][type=password],
   align-items: center;
   flex-direction: row;
   box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+  display: flex;
+  background-color: #EEE;
+  height: 800px;
+  min-width: 100vw;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.footer__links {
+  display: flex;
+  margin-left: 10vw;
+  margin-right: 40vw;
+  flex-direction: row;
+  gap: 10rem;
+}
+.footer__links h4 {
+  font-size: 26px;
+}
+.footer__links ul {
+  list-style: none;
+  color: rgba(0, 0, 0, 0.6);
+}
+.footer__links ul li {
+  display: flex;
+  margin-top: 1vh;
+}
+.footer__links ul li a:link {
+  text-decoration: none;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.footer__links__service__items, .footer__links__stores__items, .footer__links__discover__items {
+  display: flex;
+  flex-direction: column;
+  top: 3vh;
+  position: relative;
+}
+.footer__links__service__items .footer__links__discover__items--spacer, .footer__links__stores__items .footer__links__discover__items--spacer, .footer__links__discover__items .footer__links__discover__items--spacer {
+  margin-top: 2vh;
+}
+.footer__socials {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .mobile__nav {
