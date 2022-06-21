@@ -1,0 +1,57 @@
+.footer {
+    display: flex;
+    background-color: #EEE;
+    height: 800px;
+    min-width: 100vw;
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    &__links {
+        display: flex;
+        margin-left: 10vw;
+        margin-right: 40vw;
+        flex-direction: row;
+        gap: 10rem;
+
+        h4 {
+            font-size: 26px;
+        }
+
+        ul {
+            list-style: none;
+            color: rgba($color: rgb(0, 0, 0), $alpha: 0.6);
+
+            li {
+                display: flex;
+                margin-top: 1vh;
+                a:link {
+                    text-decoration: none;
+                    font-size: 16px;
+                    color: rgba($color: rgb(0, 0, 0), $alpha: 0.8);
+
+
+
+                }
+            }
+        }
+
+        &__service__items,
+        &__stores__items,
+        &__discover__items {
+            display: flex;
+            flex-direction: column;
+            top: 3vh;
+            position: relative;
+                    .footer__links__discover__items--spacer {
+                        margin-top: 2vh;
+                    }
+        }
+
+    }
+
+    &__socials {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+}
