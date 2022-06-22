@@ -127,4 +127,15 @@ ____
 
 2. #4 wordt niet herkend door de if/else. de larger than 4 overruled de larger than 11 als dit geldt voor het ingevoerde nummer
 
-3. 
+____
+## Functions - Opdrachten
+____
+### Opdracht 4.3
+____ 
+
+
+1. Math.random() geeft bij elke activation een ander <br>
+    getal(0.****************). 16 cijfers na de comma, maar 1e cijfer wordt nooit 1 >=
+
+
+2.  if x = 5 wordt er nu een random getal (0 >= 5 < 1) weergegeven

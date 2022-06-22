@@ -6,19 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>testx3</title>
     <link rel="stylesheet" href="main.css">
-    <script defer type="text/javascript" src="./Functions/4_1_1.js"></script>
+    <script type="text/javascript" src="/02_Programming/Javascript/01_basics/mijn_opdrachten/Functions/4_1_1-4.js" defer></script>
     <!-- <style>
         body {
             display:flex;
             justify-content: center;
             margin-top: 20%;
-                }
+                
     </style> -->
 </head>
 <body>
 
         <button id="buttonOne" onclick="forButtonOne()">click me</button>
 
-        <input id="inputOne" onchange="paraLogger()" >
+        <input style="width:200px;"  id="inputOne" type="number" placeholder="Double yer numbers 'ere!" pattern="[0-9]+" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+        <button onclick="inputTester()">x2 input</button>
+        <p id="outPut"></p>
+
+        <p class="className1"></p>
 </body>
 </html>
