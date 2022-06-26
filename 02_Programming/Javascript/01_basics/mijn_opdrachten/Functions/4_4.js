@@ -1,14 +1,14 @@
-const inputElement = document.getElementById('nameInput')
-const inputValue = inputElement.value;
-// console.log(inputElement, inputValue)
+
+// const inputValue = document.getElementById('nameInput').value
+// const outputDiv = document.getElementById('generatedOutput')
+
+const input = document.querySelector('#nameInput')
+const output = document.getElementById('generatedOutput')
+
+input.addEventListener('click', czecher)
 
 function czecher() {
-    const outPutElement = document.getElementById('generatedOutput')
-    const outputChange = outPutElement.textContent
-// console.log(outPutElement, outputChange)
-
-
-    let actualCheck = inputValue;
+    let actualCheck = input.value;
         switch (actualCheck) {
             case "Esther":
                 result = "Esther zit in deze groep!" 
@@ -23,10 +23,9 @@ function czecher() {
                 result = "Nathan zit in deze groep!" 
                 break;
                 default: 
-                    result = (inputValue +" zit niet in deze groep!")
-                } console.log(result)
-
-    }
+                    result = `${input.value}  zit niet in deze groep :'(`;
+                } return output.textContent = result
+            }
 
    
 
