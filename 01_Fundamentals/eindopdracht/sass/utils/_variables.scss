@@ -1,12 +1,14 @@
 //colors
-$color__banner: rgb(47, 18, 95);
+$color__banner: #2f125f;
 $color__main: white;
 //image folder path-----test
 $imgPth: "/Fortress/wd-6-repo-Drebinius/eindopdracht/images/";
 //vars voor media queries
 $break-small: 320px;
-$break-medium: 480px;
-$break-large: 1200px;
+$break-mobile: 480px;
+$break-tab-port: 811px;
+$break-tab-lndscp: 1024px;
+$break-widescr: 1600px;
 
 // *, *::after, *::before{
 //     box-sizing: border-box;

@@ -1,16 +1,42 @@
-@font-face {
-    font-family: robotoCon;
-    src: url(/01_Fundamentals/eindopdracht/fonts/RobotoCondensed-Regular.ttf);
-}
+// @font-face {
+//     font-family: robotoCon;
+//     src: url(/01_Fundamentals/eindopdracht/fonts/RobotoCondensed-Regular.ttf) format("truetype");
+// }
 
-@font-face {
-    font-family: robotoConBold;
-    src: url(/01_Fundamentals/eindopdracht/fonts/RobotoCondensed-Bold.ttf);
-    font-weight: bold;
-}
+// @font-face {
+//     font-family: robotoConBold;
+//     src: url(/01_Fundamentals/eindopdracht/fonts/RobotoCondensed-Bold.ttf) format("truetype");
+//     font-weight: bold;
+// }
 
-@font-face {
-    font-family: robotoConLight;
-    src: url(/01_Fundamentals/eindopdracht/fonts/RobotoCondensed-Light.ttf);
-    font-weight: light;
+// @font-face {
+//     font-family: robotoConLight;
+//     src: url(/01_Fundamentals/eindopdracht/fonts/RobotoCondensed-Light.ttf) format("truetype");
+//     font-weight: light;
+// }
+
+@mixin font-face {
+    @font-face {
+        font-family: roboto;
+        src: url(/01_Fundamentals/eindopdracht/fonts/Roboto-Thin.ttf) format("truetype");
+        font-weight: thin;
+    }
+
+    @font-face {
+        font-family: robotoCon;
+        src: url(/01_Fundamentals/eindopdracht/fonts/RobotoCondensed-Regular.ttf) format("truetype");
+        font-weight: normal;
+    }
+
+    @font-face {
+        font-family: robotoConBold;
+        src: url(/01_Fundamentals/eindopdracht/fonts/RobotoCondensed-Bold.ttf) format("truetype");
+        font-weight: bold;
+    }
+
+    @font-face {
+        font-family: robotoConLight;
+        src: url(/01_Fundamentals/eindopdracht/fonts/RobotoCondensed-Light.ttf) format("truetype");
+        font-weight: light;
+    }
 }

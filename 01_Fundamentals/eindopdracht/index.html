@@ -12,11 +12,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500&display=swap"
         rel="stylesheet">
-    <script src=></script>
+    <script src="/01_Fundamentals/eindopdracht/js/main.js" defer></script>
 </head>
 
 <body>
     <!-- header/nav start -->
+    
     <header class="banner">
         <a href="./index.html" class="banner__logo"><img class="banner__logo__img" src="./images/TG_logo1.png"
                 alt="Techgrounds logo"></a>
@@ -37,27 +38,30 @@
                     <a href="#" target="_self" title="contact">Contact</a>
                 </div>
             </div>
-
-            <!--welcome to the burgerzone-->
-            <button class="hamburger">
-                <div class="bar"></div>
-            </button>
         </nav>
+
+   <!--welcome to the burgerzone-->
+        <button class="hambutton">
+            <div class="bar"></div>
+        </button>
+
+
         <nav class="mobile__nav">
-            <div class="mobile__navbar__list_home">
+            <div class="mobile__nav__home">
                 <a href="#" target="_self" title="home">Home</a>
             </div>
-            <div class="mobile__navbar__list_popular">
+            <div class="mobile__nav__popular">
                 <a href="#" target="_self" title="popular">Popular</a>
             </div>
-            <div class="mobile__navbar__list_contact">
+            <div class="mobile__nav__contact">
                 <a href="#" target="_self" title="contact">Contact</a>
             </div>
         </nav>
     </header>
+       
     <!-- header/nav end -->
 
-
+  
     <!-- login section start -->
     <section class="login">
         <form class="login__form">
@@ -123,6 +127,33 @@
                 </div>
             </div>
 
+            <div class="pcards__box__card__one">
+                <figure class="card__one__image">
+                    <img src="./images/165x165.png" alt="" class="pcard__one__image">
+                </figure>
+                <div class="card__one__text card__text">
+                    <p class="card__one__text titleUpp">title</p>
+                    <h4 class="card__one__text titleLow">subtitle bold</h4>
+                    <p class="card__one__text prdctTxt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                        eligendi expedita vitae qui! Eaque nisi
+                        deleniti. I'm Commander Shepard and this is my favorite product card on the Citadel. Architecto
+                        quaerat
+                        quas expedita ad voluptatem? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Doloremque accusamus, qui at rerum debitis est?</p>
+                </div>
+                <div class="card__one__mng">
+                    <div class="card__one__price__box price__box">
+                        <span class="card__one__price">99<span
+                                class="card__one__price__sep">,</span><sup>99</sup></span>
+
+                    </div>
+                    <p>Voor 23:59 besteld, morgen in huis</p>
+                    <div class="card__one__mng__bttn">
+                        <a href="" class="button__basket--add"></a>
+                        <a href="" class="button__basket--fav"></a>
+                    </div>
+                </div>
+            </div>
 
             <div class="pcards__box__card__one">
                 <figure class="card__one__image">
@@ -135,7 +166,8 @@
                         eligendi expedita vitae qui! Eaque nisi
                         deleniti. I'm Commander Shepard and this is my favorite product card on the Citadel. Architecto
                         quaerat
-                        quas expedita ad voluptatem?</p>
+                        quas expedita ad voluptatem? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Doloremque accusamus, qui at rerum debitis est?</p>
                 </div>
                 <div class="card__one__mng">
                     <div class="card__one__price__box price__box">
@@ -152,32 +184,7 @@
             </div>
 
 
-            <div class="pcards__box__card__one">
-                <figure class="card__one__image">
-                    <img src="./images/165x165.png" alt="" class="pcard__one__image">
-                </figure>
-                <div class="card__one__text card__text">
-                    <p class="card__one__text titleUpp">title</p>
-                    <h4 class="card__one__text titleLow">subtitle bold</h4>
-                    <p class="card__one__text prdctTxt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                        eligendi expedita vitae qui! Eaque nisi
-                        deleniti. I'm Commander Shepard and this is my favorite product card on the Citadel. Architecto
-                        quaerat
-                        quas expedita ad voluptatem?</p>
-                </div>
-                <div class="card__one__mng">
-                    <div class="card__one__price__box price__box">
-                        <span class="card__one__price">99<span
-                                class="card__one__price__sep">,</span><sup>99</sup></span>
-
-                    </div>
-                    <p>Voor 23:59 besteld, morgen in huis</p>
-                    <div class="card__one__mng__bttn">
-                        <a href="" class="button__basket--add"></a>
-                        <a href="" class="button__basket--fav"></a>
-                    </div>
-                </div>
-            </div>
+            
 
 
 
@@ -222,19 +229,32 @@
                     <li><a href="#" target="_self" title="">Outlet</a></li>
                     <li><a href="#" target="_self" title="">Acties</a></li>
                     <span class="footer__links__discover__items--spacer">
-                    <li><a href="#" target="_self" title="">Damesmode</a></li>
-                    <li><a href="#" target="_self" title="">Herenmode</a></li>
-                    <li><a href="#" target="_self" title="">Kindermode</a></li>
-                    <li><a href="#" target="_self" title="">Wonen</a></li>
-                    <li><a href="#" target="_self" title="">Cosmetica</a></li>
+                        <li><a href="#" target="_self" title="">Damesmode</a></li>
+                        <li><a href="#" target="_self" title="">Herenmode</a></li>
+                        <li><a href="#" target="_self" title="">Kindermode</a></li>
+                        <li><a href="#" target="_self" title="">Wonen</a></li>
+                        <li><a href="#" target="_self" title="">Cosmetica</a></li>
                     </span>
                 </ul>
             </div>
         </div>
         <div class="footer__socials">
             <h3>Wil je ons volgen?</h3>
-            <div class="footer__socials__icons"></div>
-          
+            <div class="footer__socials__icons">
+                <a href="https://facebook.com" target="_blank" class="icon__link --fb"><img
+                        class="footer__socials__icons--images"
+                        src="/01_Fundamentals/eindopdracht/images/socials_logo_fb.svg"></a>
+                <a href="https://linkedin.com" target="_blank" class="icon__link --linkedin"><img
+                        class="footer__socials__icons--images"
+                        src="/01_Fundamentals/eindopdracht/images/socials_logo_linkedin.svg"></a>
+                <a href="https://instagram.com" target="_blank" class="icon__link --instagram"><img
+                        class="footer__socials__icons--images"
+                        src="/01_Fundamentals/eindopdracht/images/socials_logo_instagram.svg" alt=""></a>
+                <a href="https://twitter.com" target="_blank" class="icon__link --twitter"><img
+                        class="footer__socials__icons--images"
+                        src="/01_Fundamentals/eindopdracht/images/socials_logo_twitter.svg" alt=""></a>
+            </div>
+
         </div>
     </footer>
 

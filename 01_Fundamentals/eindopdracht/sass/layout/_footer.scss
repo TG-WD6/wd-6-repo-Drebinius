@@ -1,17 +1,19 @@
 .footer {
     display: flex;
     background-color: #EEE;
-    height: 800px;
+    height: auto;
     min-width: 100vw;
     padding-top: 64px;
     padding-bottom: 64px;
 
+        
+
     &__links {
         display: flex;
         margin-left: 10vw;
-        margin-right: 40vw;
+        margin-right: auto;
         flex-direction: row;
-        gap: 10rem;
+        gap: 10vw;
 
         h4 {
             font-size: 26px;
@@ -30,7 +32,9 @@
                     color: rgba($color: rgb(0, 0, 0), $alpha: 0.8);
 
 
-
+                    @media (max-width:$break-tab-port) {
+                        font-size: 20px;
+                    }   
                 }
             }
         }
@@ -46,12 +50,45 @@
                         margin-top: 2vh;
                     }
         }
-
+    @media (max-width:$break-tab-port) {   
+            gap:15vw;
+            margin: auto;
+            justify-content: center;
+    }
     }
 
     &__socials {
         display: flex;
-        flex-direction: row-reverse;
-    }
+        flex-direction: column;  
+        align-items: center;
+        margin-right: 5vw;
 
+        &__icons {
+            display: flex;
+            flex-direction: row;
+            width: 220px;
+            height: auto;
+            gap: 3px;
+            padding-top: 5px;
+
+            &__images {
+                // max-width: 50px;
+                object-fit: cover;
+            }
+
+            .icon__link {
+                display: flex;
+                min-width: 50px;
+                max-height: 50px;
+                
+            }
+
+        }
+    @media (max-width:$break-tab-port) {
+            margin-right: 0;
+            padding-top: 64px
+    }  
+    }
+@media (max-width:$break-tab-port) {
+            flex-direction: column;}
 }

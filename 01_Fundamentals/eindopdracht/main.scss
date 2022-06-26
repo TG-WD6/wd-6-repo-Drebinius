@@ -3,6 +3,7 @@
 //utilities
 @import "./sass/utils/variables";
 @import "./sass/utils/mixins";
+@include font-face;
 @import "./sass/utils/resets";
 //components
 //layout
@@ -124,14 +125,6 @@
 //     height: 600px;
 // }
 
-.mobile__nav {
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    // min-height: 75vh;
-    z-index: 98;
-    display: block;
-}
+
 
 // @media (min-width: 740px){.banner__navbar__list{}}

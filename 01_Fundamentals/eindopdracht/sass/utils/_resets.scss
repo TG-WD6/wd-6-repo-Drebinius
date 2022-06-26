@@ -6,11 +6,12 @@
     margin: 0%;
     padding: 0%;
     font-family: robotoCon, sans-serif, monospace;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: $color__main;
-    width: 100vw;
+    // width: 100vw;
     // height: 2000px;
     margin: 0;
     padding: 0;
