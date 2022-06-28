@@ -1,23 +1,8 @@
-// class Club{
-//     constructor(name,type,membAmt) {
-//     this.name=name
-//     this.type=type
-//     this.membAmt=membAmt
-//     this.contactName      =Contact.contactName
-//     this.contactAddress   =Contact.contactAddress
-//     this.phNo             =Contact.phNo
-
-//     class ContactInfo{
-//         constructor(adress,phNo,contact){
-//         this.adress=adress
-//         this.phNo=phNo
-//         this.contact=contact
-//     }}}}
 
 class Club{
-    constructor(clubName,type,membAmt){
+    constructor(clubName,clubType,membAmt){
         this.clubName =clubName
-        this.type     =type
+        this.clubType     =clubType
         this.membAmt  =membAmt
   
     }
@@ -55,7 +40,17 @@ console.log(clubClient_D[1])
 console.log(clubClient_E[0])
 console.log(clubClient_E[1])
 
-console.log(clubClient_E[Contact.contactName])
+console.log(clubClient_E[0].clubName)
+console.log(clubClient_E[0].clubType)
+console.log(clubClient_E[0].membAmt)
+console.log(clubClient_E[1].contactName)
+console.log(clubClient_E[1].contactAddress)
+console.log(clubClient_E[1].phNo)
 
-clubClient_D.push([Contact.phNo = 'defunct number, upd req'])
+clubClient_D.push(clubClient_D[1].phNo = 'defunct number, upd req')
+    
     console.log(clubClient_D)
+
+for (let club in clubArray) {
+    console.log(clubArray[club])
+}
