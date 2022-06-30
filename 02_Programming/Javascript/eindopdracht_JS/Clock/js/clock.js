@@ -4,7 +4,10 @@ const hourHand = document.querySelector('[data-hour-hand')
 const minuteHand = document.querySelector('[data-minute-hand')
 const secondHand = document.querySelector('[data-second-hand')
 
-function setClock() {
+
+   
+
+    function setClock() {
     const currentDate = new Date();
     const secondsRatio = currentDate.getSeconds() / 60
     const minutesRatio = (secondsRatio + currentDate.getMinutes()) / 60
@@ -20,6 +23,24 @@ function setRotation(element, rotationRatio) {
 }
 
 setClock()
+
+
+function loadTimeZoneList(){   
+    let select = document.getElementById("dropdownTimeZone");
+    select.innerHTML = ""; 
+    let browserTimeZone = moment.tz.guess();
+    let timeZones = moment.tz.names();
+       timeZones.forEach((timeZone) =>{
+       option = document.createElement("option");      
+         option.textContent = `${timeZone} (GMT${moment.tz(timeZone).format('Z')})`; 
+         option.value = timeZone;
+         if (timeZone == browserTimeZone){
+             option.selected = true;
+         }
+         select.appendChild(option);
+       });
+    
+  }
 /////////////////////////////digi
 const clockSpan = document.querySelector('[data-digi-clock]')
 
