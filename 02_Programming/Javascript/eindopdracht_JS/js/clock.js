@@ -20,6 +20,8 @@ function setRotation(element, rotationRatio) {
 }
 
 setClock()
+/////////////////////////////digi
+const clockSpan = document.querySelector('[data-digi-clock]')
 
 function currentTime() {
     let date = new Date(); 
@@ -39,7 +41,7 @@ function currentTime() {
       
      let time = hh + ":" + mm + ":" + ss + " " + session;
   
-    document.getElementById("clock").innerText = time; 
+     clockSpan.innerText = time; 
     let t = setTimeout(function(){ currentTime() }, 1000); 
   
   }
