@@ -30,14 +30,14 @@
 
         display: grid;
         grid-template-columns: repeat(3, auto);
-        
+
 
         &__list {
 
             display: grid;
             grid-gap: 50px;
             grid-template-columns: repeat(3, auto);
-            
+
 
             &__home {
                 display: flex;
@@ -57,39 +57,43 @@
                 justify-content: center;
             }
 
-           a {
-               color: white;
-               text-decoration: none;
-               font-size: 22px;
-           }
-           @media (max-width:680px) {
-             max-width: 1px;
-            visibility: hidden;}    
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 22px;
+            }
+
+            @media (max-width:680px) {
+                max-width: 1px;
+                visibility: hidden;
+            }
         }
-            
+
     }
 }
 
 .list__home {
-    
+
     &__img {
         max-width: 25px;
         max-height: 22px;
         margin-right: 5px;
-        }
+    }
+
     &__pop {
         max-width: 25px;
         max-height: 25px;
         margin-right: 5px;
-        }
+    }
+
     &__con {
         max-width: 20px;
         max-height: 20px;
         // margin-right: 5px;
-    }    
+    }
 }
 
-.mobile__nav{
+.mobile__nav {
     // visibility: hidden;
     position: fixed;
     top: 0;
@@ -106,63 +110,70 @@
     @media (min-width:681px) {
         visibility: hidden;
     }
-        &.is-active{
-            left: 0;
-        }
-        &.is-active div{
-            animation: animate 350ms ease calc(var(--i) * 100ms) both;
-        }
 
-        a {
-            display: block;
-            text-align: left;
-            margin: 0 auto 16px;
-            padding: 12px 16px;
-            background-color: #2f125f;
-            transition: 0.5s;
-            
+    &.is-active {
+        left: 0;
+    }
 
-            color: #FFF;
-            text-decoration: none;
-                &:hover {
-                  background-color: #462183;  
-                }
+    &.is-active div {
+        animation: animate 350ms ease calc(var(--i) * 100ms) both;
+    }
+
+    a {
+        display: block;
+        text-align: left;
+        margin: 0 auto 16px;
+        padding: 12px 16px;
+        background-color: #2f125f;
+        transition: 0.5s;
+
+
+        color: #FFF;
+        text-decoration: none;
+
+        &:hover {
+            background-color: #462183;
         }
+    }
 }
+
 @keyframes animate {
     0% {
-      opacity: 0;
-      transform: translateX(100%);
+        opacity: 0;
+        transform: translateX(100%);
     }
-    
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-.hambutton {       
+}
+
+.hambutton {
     @media (min-width:681px) {
         visibility: hidden;
     }
 
-    @media (max-width:680px){
-    position: relative;
-    display: block;
-    margin-top: 18px;
-    margin-right: 10px;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
+    @media (max-width:680px) {
+        position: relative;
+        display: block;
+        margin-top: 18px;
+        margin-right: 10px;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
 
-    appearance: none;
-    outline: none;
-    background: none;
-    border: none;
+        appearance: none;
+        outline: none;
+        background: none;
+        border: none;
 
     }
 }
 
-.hambutton .bar, .hambutton::before, .hambutton::after {
-    content:'';
+.hambutton .bar,
+.hambutton::before,
+.hambutton::after {
+    content: '';
     display: block;
     width: 100%;
     height: 5px;
@@ -171,14 +182,16 @@
     transition: 0.4s;
 }
 
-.hambutton.is-active{
-        &::before{
+.hambutton.is-active {
+    &::before {
         transform: rotate(-45deg) translate(-8px, 6px);
-        }
-        &::after{
+    }
+
+    &::after {
         transform: rotate(45deg) translate(-9px, -8px);
-        }
-        .bar {
+    }
+
+    .bar {
         opacity: 0;
-        }
+    }
 }

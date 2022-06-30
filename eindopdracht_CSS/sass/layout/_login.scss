@@ -16,6 +16,7 @@ input[type=text],
     &[type=password] {
         margin-bottom: 5px;
     }
+
     @media (max-width:$break-tab-port) {
         margin: 16px;
         font-size: 20px;
@@ -47,22 +48,24 @@ input[type=text],
 
     .avatar {
         border-radius: 10%;
-     }
-    
+    }
+
 
     &__desc {
         font-weight: 50;
     }
 }
+
 .avatar__box {
     width: 250px;
     height: 250px;
     border: 1px solid rgba(32, 32, 32, 0.1);
     border-radius: 10%;
     background-image: url(/eindopdracht_CSS/images/avatar.png);
-                &:hover {
-                background-image: url(/eindopdracht_CSS/images/assuming_control.png);
-            }
+
+    &:hover {
+        background-image: url(/eindopdracht_CSS/images/assuming_control.png);
+    }
 }
 
 
@@ -74,13 +77,14 @@ input[type=text],
     width: 260px;
     height: 40px;
     background-color: #2211c2;
-        &:hover {
+
+    &:hover {
         cursor: pointer;
         background-color: rgba(17, 153, 194, 1);
         transition: all 0.2s ease-out;
     }
 
-        
+
 
 }
 
@@ -116,11 +120,12 @@ input[type=text],
     &:hover {
         cursor: pointer;
     }
+
     &:active {
         transition: all 0.2s ease-out;
         cursor: pointer;
         background-color: rgb(26, 151, 21);
-        
+
     }
 }
 

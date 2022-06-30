@@ -193,7 +193,9 @@ body {
   }
 }
 
-.hambutton .bar, .hambutton::before, .hambutton::after {
+.hambutton .bar,
+.hambutton::before,
+.hambutton::after {
   content: "";
   display: block;
   width: 100%;
@@ -437,7 +439,7 @@ input[type=text][type=password],
   height: 40px;
   margin-right: 1.5rem;
   justify-content: center;
-  background-image: url(/eindopdracht_CSS/images/images/heart.svg);
+  background-image: url(/eindopdracht_CSS/images/heart.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
