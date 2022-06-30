@@ -109,16 +109,10 @@
         &.is-active{
             left: 0;
         }
+        &.is-active div{
+            animation: animate 350ms ease calc(var(--i) * 100ms) both;
+        }
 
-        &__home{
-           transition: 0.4s 0.3s;
-        }
-        &__popular{
-            transition: 0.4s 0.5s;
-        }
-        &__contact{
-            transition: 0.4s 0.7s;
-        }
         a {
             display: block;
             text-align: left;
@@ -135,7 +129,16 @@
                 }
         }
 }
-
+@keyframes animate {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    
+    100% {
+      opacity: 1;
+    }
+  }
 .hambutton {       
     @media (min-width:681px) {
         visibility: hidden;

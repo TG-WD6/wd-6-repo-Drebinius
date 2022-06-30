@@ -133,14 +133,9 @@ body {
 .mobile__nav.is-active {
   left: 0;
 }
-.mobile__nav__home {
-  transition: 0.4s 0.3s;
-}
-.mobile__nav__popular {
-  transition: 0.4s 0.5s;
-}
-.mobile__nav__contact {
-  transition: 0.4s 0.7s;
+.mobile__nav.is-active div {
+  -webkit-animation: animate 350ms ease calc(var(--i) * 100ms) both;
+          animation: animate 350ms ease calc(var(--i) * 100ms) both;
 }
 .mobile__nav a {
   display: block;
@@ -156,6 +151,25 @@ body {
   background-color: #462183;
 }
 
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (min-width: 681px) {
   .hambutton {
     visibility: hidden;
@@ -326,6 +340,7 @@ input[type=text][type=password],
 .pcards .card__text {
   flex-grow: 2;
   padding: 5px;
+  min-width: 120px;
 }
 .pcards .card__text .prdctTxt {
   font-family: roboto;
@@ -434,7 +449,8 @@ input[type=text][type=password],
 }
 
 .pcards__box {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   padding: 10px;
   gap: 5px;
 }
@@ -444,6 +460,11 @@ input[type=text][type=password],
   align-items: center;
   flex-direction: row;
   box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 700px) {
+  .pcards__box__card__one {
+    flex-direction: column;
+  }
 }
 
 .footer {
@@ -460,6 +481,11 @@ input[type=text][type=password],
   margin-right: auto;
   flex-direction: row;
   gap: 10vw;
+}
+@media (max-width: 600px) {
+  .footer__links {
+    flex-direction: column;
+  }
 }
 .footer__links h4 {
   font-size: 26px;
