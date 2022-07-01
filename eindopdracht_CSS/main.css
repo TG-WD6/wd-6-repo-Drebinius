@@ -274,10 +274,10 @@ input[type=text][type=password],
   height: 250px;
   border: 1px solid rgba(32, 32, 32, 0.1);
   border-radius: 10%;
-  background-image: url(/eindopdracht_CSS/images/avatar.png);
+  background-image: url(./eindopdracht_CSS/images/avatar.png);
 }
 .avatar__box:hover {
-  background-image: url(/eindopdracht_CSS/images/haha.png);
+  background-image: url(./eindopdracht_CSS/images/haha.png);
 }
 
 .button__holder {
@@ -298,7 +298,7 @@ input[type=text][type=password],
 .button__icon {
   display: flex;
   flex-shrink: 1;
-  background-image: url(/eindopdracht_CSS/images/login.svg);
+  background-image: url(./eindopdracht_CSS/images/login.svg);
   background-repeat: no-repeat;
   width: 30px;
   margin-top: 7px;
@@ -420,7 +420,7 @@ input[type=text][type=password],
   background-color: rgb(255, 212, 21);
   box-shadow: 3px 2px 3px 1px;
   justify-content: center;
-  background-image: url(/images/cart-add-buy.svg);
+  background-image: url(./eindopdracht_CSS/images/cart-add-buy.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -439,13 +439,13 @@ input[type=text][type=password],
   height: 40px;
   margin-right: 1.5rem;
   justify-content: center;
-  background-image: url(/eindopdracht_CSS/images/heart.svg);
+  background-image: url(./eindopdracht_CSS/images/heart.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 .button__basket--fav:active, .button__basket--fav:hover {
   transition: all 0.3s ease;
-  background-image: url(/eindopdracht_CSS/images/heart-solid.svg);
+  background-image: url(./eindopdracht_CSS/images/heart-solid.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
