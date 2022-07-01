@@ -1,22 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500&display=swap");
 @font-face {
   font-family: roboto;
-  src: url(/01_Fundamentals/eindopdracht/fonts/Roboto-Thin.ttf) format("truetype");
+  src: url(/eindopdracht_CSS/fonts/Roboto-Thin.ttf) format("truetype");
   font-weight: thin;
 }
 @font-face {
   font-family: robotoCon;
-  src: url(/01_Fundamentals/eindopdracht/fonts/RobotoCondensed-Regular.ttf) format("truetype");
+  src: url(/eindopdracht_CSS/fonts/RobotoCondensed-Regular.ttf) format("truetype");
   font-weight: normal;
 }
 @font-face {
   font-family: robotoConBold;
-  src: url(/01_Fundamentals/eindopdracht/fonts/RobotoCondensed-Bold.ttf) format("truetype");
+  src: url(/eindopdracht_CSS/fonts/RobotoCondensed-Bold.ttf) format("truetype");
   font-weight: bold;
 }
 @font-face {
   font-family: robotoConLight;
-  src: url(/01_Fundamentals/eindopdracht/fonts/RobotoCondensed-Light.ttf) format("truetype");
+  src: url(/eindopdracht_CSS/fonts/RobotoCondensed-Light.ttf) format("truetype");
   font-weight: light;
 }
 *,
@@ -124,6 +123,7 @@ body {
   margin-top: 75px;
   padding-top: 25px;
   transition: 0.4s;
+  font-size: 24px;
 }
 @media (min-width: 681px) {
   .mobile__nav {
@@ -342,7 +342,7 @@ input[type=text][type=password],
 .pcards .card__text {
   flex-grow: 2;
   padding: 5px;
-  min-width: 120px;
+  margin: 0 10px 0 10px;
 }
 .pcards .card__text .prdctTxt {
   font-family: roboto;
@@ -487,6 +487,7 @@ input[type=text][type=password],
 @media (max-width: 600px) {
   .footer__links {
     flex-direction: column;
+    align-items: center;
   }
 }
 .footer__links h4 {

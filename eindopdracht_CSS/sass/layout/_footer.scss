@@ -17,6 +17,7 @@
 
         @media (max-width:600px) {
             flex-direction: column;
+            align-items: center;
         }
 
         h4 {
@@ -27,6 +28,7 @@
             list-style: none;
             color: rgba($color: rgb(0, 0, 0), $alpha: 0.6);
 
+       
             li {
                 display: flex;
                 margin-top: 1vh;
