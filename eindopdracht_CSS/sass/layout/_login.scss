@@ -59,9 +59,9 @@ input[type=text],
     height: 250px;
     border: 1px solid rgba(32, 32, 32, 0.1);
     border-radius: 10%;
-    background-image: url('/eindopdracht_CSS/images/avatar.png');
+    background-image: url(/eindopdracht_CSS/images/avatar.png);
                 &:hover {
-                background-image: url('/eindopdracht_CSS/images/assuming_control.png');
+                background-image: url(/eindopdracht_CSS/images/haha.png);
             }
 }
 
@@ -87,31 +87,22 @@ input[type=text],
 .button__icon {
     display: flex;
     flex-shrink: 1;
-    background-image: url('/eindopdracht_CSS/images/login.svg');
+    background-image: url(/eindopdracht_CSS/images/login.svg);
     background-repeat: no-repeat;
     width: 30px;
     margin-top: 7px;
     margin-left: 10px;
 
-    // height: 50px;
-    // float: left;
 }
 
 #login__button {
-    // display: flex;
     flex-grow: 2;
-    // justify-content: center;
-    // align-items: center;
     margin-top: 0px;
     border: 0;
     font-size: x-large;
     font-weight: 400;
-    // text-transform: full-width;
-    // width: 260px;
     color: rgb(255, 255, 255);
     background-color: rgb(34, 17, 194, 0.0);
-    // padding: 12px 16px;
-    // border-radius: %;
 
     &:hover {
         cursor: pointer;

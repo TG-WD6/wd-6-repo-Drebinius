@@ -1,6 +1,5 @@
 .pcards {
     display: grid;
-    // border: thin black solid;
     margin-top: 15vh;
     margin-left: 5vw;
     margin-right: 5vw;
@@ -101,7 +100,7 @@
     background-color: rgb(255, 212, 21);
     box-shadow: 3px 2px 3px 1px;
     justify-content: center;
-    background-image: url('/eindopdracht_CSS/images/cart-add-buy.svg');
+    background-image: url(/eindopdracht_CSS/images/cart-add-buy.svg);
     background-repeat: no-repeat;
     background-position: center;
 
@@ -123,14 +122,14 @@
     height: 40px;
     margin-right: 1.5rem;
     justify-content: center;
-    background-image: url('/eindopdracht_CSS/images/heart.svg');
+    background-image: url(/eindopdracht_CSS/images/heart.svg);
     background-repeat: no-repeat;
     background-position: center;
 
     &:active,
     &:hover {
         transition: all 0.3s ease;
-        background-image: url('/eindopdracht_CSS/images/heart-solid.svg');
+        background-image: url(/eindopdracht_CSS/images/heart-solid.svg);
         background-repeat: no-repeat;
         background-position: center;
     }
