@@ -11,14 +11,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@-webkit-keyframes glow {
-  from {
-    box-shadow: -10px 2px 30px blue, 30px 20px 10px green, 20px 30px 50px pink, -40px -40px 30px brown;
-  }
-  to {
-    box-shadow: 10px 0px 40px green, -20px -20px 40px orange, 20px 40px 20px deeppink, 10px 30px 10px gray;
-  }
-}
 @keyframes glow {
   from {
     box-shadow: -10px 2px 30px blue, 30px 20px 10px green, 20px 30px 50px pink, -40px -40px 30px brown;
@@ -51,8 +43,7 @@ body {
   position: absolute;
 }
 .clock:hover {
-  -webkit-animation: glow 3s ease-in-out infinite alternate;
-          animation: glow 3s ease-in-out infinite alternate;
+  animation: glow 3s ease-in-out infinite alternate;
 }
 
 .clock .number {

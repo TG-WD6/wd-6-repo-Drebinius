@@ -20,8 +20,7 @@ h1 {
   text-align: center;
 }
 .banner .slogan:hover {
-  -webkit-animation: gezelligheid 10s alternate infinite ease-in-out;
-          animation: gezelligheid 10s alternate infinite ease-in-out;
+  animation: gezelligheid 10s alternate infinite ease-in-out;
   color: red;
 }
 .banner .slogan span {
@@ -40,15 +39,6 @@ h1 {
   margin: 2%;
   border: 4px solid black;
   font-size: 32px;
-}
-
-@-webkit-keyframes gezelligheid {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes gezelligheid {

@@ -19,9 +19,6 @@ buttons.forEach(button => {
 
 
 
-
-
-
 // let slideIndex = 1;
 // showSlides(slideIndex);
 

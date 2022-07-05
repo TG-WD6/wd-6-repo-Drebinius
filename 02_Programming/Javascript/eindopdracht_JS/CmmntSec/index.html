@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comment section</title>
+    <link rel="stylesheet" href="comment.css">
+    <script src="./rsrcs/js/comment.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="comment__container active" id="first-comment">
+          <div class="comment__card">
+            <h3 class="comment__title">The first comment</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
+              eaque itaque sit tempora officiis, quisquam atque? Impedit
+              dignissimos error laudantium!
+            </p>
+            <div class="comment__card-footer">
+            
+              <div class="show-replies">Reply 2</div>
+            </div>
+          </div>
+          <div
+            class="comment__container"
+            dataset="first-comment"
+            id="first-reply"
+          >
+            <div class="comment__card">
+              <h3 class="comment__title">The first reply</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptatum eaque itaque sit tempora officiis, quisquam atque?
+                Impedit dignissimos error laudantium!
+              </p>
+              <div class="comment__card-footer">
+              
+                <div class="show-replies">Reply 1</div>
+              </div>
+            </div>
+            <div
+              class="comment__container"
+              dataset="first-reply"
+              id="first-first-reply"
+            >
+              <div class="comment__card">
+                <h3 class="comment__title">The first reply to the first reply</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Voluptatum eaque itaque sit tempora officiis, quisquam atque?
+                  Impedit dignissimos error laudantium!
+                </p>
+                <div class="comment__card-footer">
+                
+                  <div class="show-replies">Reply 1</div>
+                </div>
+              </div>
+              <div class="comment__container" dataset="first-first-reply">
+                <div class="comment__card">
+                  <h3 class="comment__title">
+                    The first reply to the first reply to the first reply
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Voluptatum eaque itaque sit tempora officiis, quisquam atque?
+                    Impedit dignissimos error laudantium!
+                  </p>
+                  <div class="comment__card-footer">
+                  
+                    <div class="show-replies">Reply 0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="comment__container" dataset="first-comment">
+            <div class="comment__card">
+              <h3 class="comment__title">The second reply</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptatum eaque itaque sit tempora officiis, quisquam atque?
+                Impedit dignissimos error laudantium!
+              </p>
+              <div class="comment__card-footer">
+            
+                <div class="show-replies">Reply 0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+            <div class="container__reply">
+                <h2>Leave a comment</h2>
+                <form action="">
+                    <textarea name="" placeholder="comment goes here" cols="30" rows="10"></textarea>
+                    <div class="user__info">
+                        <input type="email" name="" id="">
+                        <input type="name">
+                    </div>
+                    <div class="btn">
+                        <input type="submit" value="Comment">
+                        <button id="clear">cancel</button>
+                    </div>
+                </form>
+            </div>
+
+</body>
+
+</html>

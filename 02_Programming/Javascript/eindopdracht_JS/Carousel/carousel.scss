@@ -2,7 +2,11 @@
     box-sizing:border-box;
     margin: 0%;
     // padding: 0%;
+}
 
+body {
+    position: absolute;
+    background-color: #000000CC
 }
 
 .carousel {
@@ -11,7 +15,7 @@
     position: relative;
     top: 5vh;
     left: 5vw;
-    box-shadow: 10px 10px 10px 1000px #000000D9;
+    // box-shadow: 10px 10px 10px 1000px #000000D9;
     z-index: 1;
 }
 
@@ -33,6 +37,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: 25px;
 }
 
 .slide[data-active]{
@@ -52,7 +57,7 @@
     color: #FFFFFF80;
     cursor: pointer;
     border-radius: .25rem;
-    padding: 0 .5rem;
+    padding: 0  10px .5rem;
     background-color: #0000001A;
 }
 
