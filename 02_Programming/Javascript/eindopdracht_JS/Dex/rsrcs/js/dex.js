@@ -20,6 +20,7 @@ const iterateMons = async () => {
 
 const fetchPokemon = (id) => {
     const pokJSON = `https://raw.githubusercontent.com/TG-WD6/wd-6-repo-Drebinius/b6d620546c44ed59651c4211ca21197e57cbf095/02_Programming/Javascript/eindopdracht_JS/Dex/rsrcs/js/pokedex.json`;
+    const spritePath = `https://github.com/TG-WD6/wd-6-repo-Drebinius/tree/eindopdracht_JS/02_Programming/Javascript/eindopdracht_JS/Dex/rsrcs/sprites`
     fetch(pokJSON)
         .then((res) => {
             return res.json();
@@ -28,12 +29,19 @@ const fetchPokemon = (id) => {
             // console.log(pokeArray); 
 
             const pokemon = { };    ////maakt een object?
-            pokemon['id'] = pokeArray[`${id}`].id
-            pokemon['name'] = pokeArray[`${id}`].name.english;
-            pokemon['type'] = pokeArray[`${id}`].type
-            pokemon['stats'] = pokeArray[`${id}`].base
-            // pokemon['sprite'] = (await import(`../sprites/${this.props.picPath}`));
-                // console.log(pokemon)    //logged de poke overeenkomend ID# als object
+                pokemon['id'] = pokeArray[`${id}`].id
+                pokemon['name'] = pokeArray[`${id}`].name.english;
+                // pokemon['type'] = pokeArray[`${id}`].type
+                pokemon['type'] = ' '
+                            pokeArray[`${id}`].type.forEach((type) => {
+                                pokemon['type'] = pokemon['type'] + ', ' +
+                                type.name})
+
+                pokemon['stats'] = pokeArray[`${id}`].base
+                // pokemon['stats'] = JSON.parse(pokeArray[`${id}`].base)
+
+                // pokemon['sprite'] = (await import(spritePath`${??????}`));
+                    // console.log(pokemon)    //logged de poke overeenkomend ID# als object
             createPokeCard(pokemon)
         })
 };
@@ -41,7 +49,9 @@ const createPokeCard =(pokemon) => {
     const cardElement = document.createElement('div')
     cardElement.classList.add('pokemon')
     const cardInnerHTML = `
+    ${pokemon.id}
     ${pokemon.name}
+    ${pokemon.type}
     `;
     cardElement.innerHTML = cardInnerHTML
     cardContainer.appendChild(cardElement)
@@ -49,5 +59,3 @@ const createPokeCard =(pokemon) => {
 
 
  iterateMons()
-
-
