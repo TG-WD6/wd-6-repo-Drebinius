@@ -9,17 +9,15 @@ const iterateMons = async () => {   //fetch poke info/sprite for amount set in d
 }
 
 const fetchPokemonSprite = (id) => {// aparte spritefetcher
-    // const url= `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${id+1}.png`;
-    const url= `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id+1}.png`;
+    const url= `https://pokeapi.co/api/v2/pokemon/${id+1}`;
     fetch(url)
         .then((res) => {
-            console.log(res)
-            return res.blob()
+            return res.json()
         })
         .then((data) => {
             const pokemon = { }
-            pokemon['sprite'] = data.url
-            // console.log(pokemon.sprite)
+            pokemon['sprite'] = data.sprites['front_default']
+            // console.log(pokemon['sprite'])
         })
 }; 
 
@@ -42,31 +40,22 @@ const fetchPokemon = (id) => {
                 //                 pokemon['type'] = pokemon['type'] + ', ' +       
                 //                 type.name})                                      
 
-                pokemon['stats'] = Object.keys(pokeArray[`${id}`].base)
-                
+                pokemon['stats'] = pokeArray[`${id}`].base
                 // pokemon['stats'] = JSON.parse(pokeArray[`${id}`].base) parse/map dinnae work
 
             //call spritefetch to combine with pokefetch
             fetchPokemonSprite(id)  
             createPokeCard(pokemon)
-            //call fnc createPokeCard with both info and sprite
+            //call fnc createPokeCard
         })
 };
 const createPokeCard =(pokemon) => {
     const cardElement = document.createElement('div')
     cardElement.classList.add('pokemon')
     const cardInnerHTML = `
-   <div class='container__top'>
-            <span class='pokemon__id'>${pokemon.id}</span><br>
-            <img class='pokemon__image' src="${pokemon.sprite}" alt="sprite${pokemon.name}">
-    </div>
-    <div class='container__bottom'>
-            <h3 class='pokemon__name'>${pokemon.name}</h3>
-            <small class='type'>Type: <span>${pokemon.type}</span></small>
-            <p class='pokemon__stats'>${pokemon.stats}</p>
-    </div>
-    <br>
-    <br>
+    ${pokemon.id}
+    ${pokemon.name}
+    ${pokemon.type}
     `;
     cardElement.innerHTML = cardInnerHTML
     cardContainer.appendChild(cardElement)
