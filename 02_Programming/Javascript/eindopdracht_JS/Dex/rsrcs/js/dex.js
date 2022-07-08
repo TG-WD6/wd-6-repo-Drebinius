@@ -29,21 +29,14 @@ const pokAmount = 150 //# of pokemon to ite, replace with genselectinput later
             pokemon['stats'] = Object.keys(pokeArray[`${id}`].base)
 
             let entries = Object.entries(pokeArray[`${id}`].id)
-            let sorted = entries.sort((a, b) => a[1] - b[1])
-            // pokemon['stats'] = JSON.parse(pokeArray[`${id}`].base) parse/map dinnae work
-            pokemon['idSrtd'] =sorted
+            let sorted = await entries.sort((a, b) => a[1] - b[1])
+            // pokemon['stats'] = JSON.parse(pokeArray[`${id}`].base) parse/map dinnae work---try again as with ID
+            pokemon['idSrtd'] = sorted
             
                 createPokeCard(pokemon)
-            } 
+            };
 
-            // toSort = () => {
-            //     for (id in this) {
-            //        [this].sort((a, b) =>a - b) 
-            //     }               
-            // }
-        
-;
-const createPokeCard = (pokemon) => {
+ createPokeCard = (pokemon) => {
     const cardElement = document.createElement('div')
     cardElement.classList.add('pokemon')
     const cardInnerHTML = `
@@ -52,7 +45,7 @@ const createPokeCard = (pokemon) => {
             <img id='pokemon__image' src="${pokemon.sprite}" alt="sprite${pokemon.name}">
     </div>
     <div class='container__bottom'>
-            <h3 class='pokemon__name'>${pokemon.name}</h3>
+            <h3 class='pokemon__name'>${pokemon.name}</h3><br>
             <small class='type'>Type: <span style=font-weight:700>${pokemon.type}</span></small>
 
     </div>
@@ -62,7 +55,7 @@ const createPokeCard = (pokemon) => {
     cardContainer.appendChild(cardElement) 
 }
 
-const wipePage = () => {
+ wipePage = () => {
     document.getElementById('card__container').innerHTML = ''
 }
 
