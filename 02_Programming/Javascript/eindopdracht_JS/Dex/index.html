@@ -12,14 +12,25 @@
     <script src="./rsrcs/js/dex.js" defer></script>
     <!-- <script type="text/javascript" src="./rsrcs/js/pokedex.json" defer></script> -->
 </head>
-<section class="pokedex__container">
+<section class="controls__container">
     <!-- clear, cijfers, dropdown, generate -->
-    <h1>PokéDex</h1>
+    <!-- <h1>PokéDex</h1> -->
+    <h1><img src="https://fontmeme.com/permalink/220708/dbf06b4391edfa126467c2b51705dc24.png" alt="pokedex" ></h1>
     <div class="controls">
-        <button type="reset">clear</button>
-        <input type="submit" value="">
-        <select name="generation" id="dropdown__gen"></select>
-        <button data-button-gen>generate</button>
+        <button class="controls__button clr" type="reset" data-button-clear>Clear</button>
+            <select name="generation" id="dropdown__gen">
+                <option value=" ">--Pick a generation!--</option>
+                <option value="gen--one">Generation 1</option>
+                <option value="gen--two">Generation 2</option>
+                <option value="gen--three">Generation 3</option>
+                <option value="gen--four">Generation 4</option>
+                <option value="gen--five">Generation 5</option>
+                <option value="gen--six">Generation 6</option>
+                <option value="gen--seven">Generation 7</option>
+                <option value="gen--eight">Generation 8</option>
+                <option value="gen--nine">Generation 9</option>
+            </select>
+        <button class="controls__button gen" data-button-gen>Generate</button>
     </div>
    
 </section>
