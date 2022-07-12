@@ -1,35 +1,38 @@
 const cardContainer = document.getElementById('card__container')
 const genButton = document.querySelector(`[data-button-gen]`)
 const clearButton= document.querySelector('[data-button-clear]')
+const genSelect = document.querySelector('#dropdown__gen')
 const pokAmount = 150 //# of pokemon to ite, replace with genselectinput later
 
 
 
- iterateMons = ( ) => {   //fetch poke info/sprite for amount set in dec pokAmount
+ iterateMons = ( ) => {   
     for (let i = 0; i <= pokAmount; i++) {
         // debugger
 
          fetchPokemon(i)
-        //  toSort(i)               
         }}
         
          fetchPokemon = async (id) => {
             const pokJSON = await fetch(`https://raw.githubusercontent.com/TG-WD6/wd-6-repo-Drebinius/b6d620546c44ed59651c4211ca21197e57cbf095/02_Programming/Javascript/eindopdracht_JS/Dex/rsrcs/js/pokedex.json`);
             const spriteResponse = await fetch(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id+1}.png`);
-  
             const pokeArray = await pokJSON.json()
             const blob = await spriteResponse.blob()
+            
+            
 
-
-            const pokemon = { };    ////maakt een object
-            pokemon['id'] = pokeArray[`${id}`].id
+            const pokemon = { };   
+            pokemon['id'] = pokeArray[`${id}`].id;       
             pokemon['name'] = pokeArray[`${id}`].name.english;
-            pokemon['type'] = pokeArray[`${id}`].type              
+            pokemon['type'] = pokeArray[`${id}`].type[0]
+            pokemon['type2'] = pokeArray[`${id}`].type[1]
+            console.log(pokemon.type, pokemon.type2)              
             pokemon['sprite'] = URL.createObjectURL(blob)
             pokemon['stats'] = Object.keys(pokeArray[`${id}`].base)
+            let entries = Object.entries(pokeArray[`${id}`].id)/// MAYBE ARRAY INSTD OBJ?
+            // console.log(entries)
 
-            let entries = Object.entries(pokeArray[`${id}`].id)
-            let sorted = await entries.sort((a, b) => a[1] - b[1])
+            let sorted = entries.sort((a, b) => a[1] - b[1])
             // pokemon['stats'] = JSON.parse(pokeArray[`${id}`].base) parse/map dinnae work---try again as with ID
             pokemon['idSrtd'] = sorted
             

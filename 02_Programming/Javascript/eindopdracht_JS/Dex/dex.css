@@ -86,4 +86,21 @@ span.pokemon__id, span.pokemon__stats {
   display: flex;
   justify-content: center;
   text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(231, 235, 0);
+  text-shadow: 2px 2px 3px rgb(7, 7, 7);
+}
+
+.pokemon {
+  background-image: url(./rsrcs/images/bg.jpg);
+  background-position: center;
+  padding: 10px;
+  border: 2px solid rgb(223, 201, 6);
+  border-radius: 5px;
+  text-shadow: 2px 2px 3px rgb(7, 7, 7);
+  color: rgb(240, 240, 240);
+}
+.pokemon > .container__top > img {
+  width: 10vw;
 }/*# sourceMappingURL=dex.css.map */
