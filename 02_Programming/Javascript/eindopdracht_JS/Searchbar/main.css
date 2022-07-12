@@ -1,0 +1,39 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.search__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+input {
+  font-size: 1rem;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.25rem;
+  margin-top: 1rem;
+}
+
+.results__cards {
+  border: 1px solid black;
+  background-color: #fff;
+  padding: 0.5rem;
+}
+.results__cards > .header {
+  margin-bottom: 0.8rem;
+}
+.results__cards > .body {
+  font-size: 0.8rem;
+  color: grey;
+}
+
+.hide {
+  display: none;
+}/*# sourceMappingURL=main.css.map */
