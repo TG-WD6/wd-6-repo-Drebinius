@@ -25,7 +25,7 @@ async function fetchPokemon() {
 
 // genButton.addEventListener('click', createPokeCard(pokeArray))
 genButton.addEventListener('click', (e) => {
-                e.preventDefault();
+                e.preventDefault();// begrijp nog niet helemaal, maar voorkomt het ''jumpen'' van cardsize on load
                 wipePage(); //call to wipepage, otherwise genresults stack on page
                 createPokeCard(pokeArray);});
 
@@ -99,14 +99,14 @@ function createPokeCard(pokeArray) { //verander mij in createPokeCard, voeg ons 
             <small class='type'>Type: <span style=font-weight:700>${pokeType}</span></small>
             <div class='container__stats'>
                             <ul class='pokemon__stats--left'>
-                            <p>HP:${pokeStats.HP}</p>
-                            <p>Atk:${pokeStats.Attack}</p>
-                            <p>Def:${pokeStats.Defense}</p>
+                            <p class='pokemon__stats--hp'>HP:${pokeStats.HP}</p>
+                            <p class='pokemon__stats--atk'>Atk:${pokeStats.Attack}</p>
+                            <p class='pokemon__stats--def'>Def:${pokeStats.Defense}</p>
                             </ul>
                             <ul class='pokemon__stats--right'>
-                            <p>Spd:${pokeStats.Speed}</p>
-                            <p>SpAtk:${pokeStats["Sp. Attack"]}</p>
-                            <p>SpDef:${pokeStats["Sp. Defense"]}</p>
+                            <p class='pokemon__stats--spd'>Spd:${pokeStats.Speed}</p>
+                            <p class='pokemon__stats--spatk'>SpAtk:${pokeStats["Sp. Attack"]}</p>
+                            <p class='pokemon__stats--spdef'>SpDef:${pokeStats["Sp. Defense"]}</p>
                             </ul>
          </div> 
     </div>

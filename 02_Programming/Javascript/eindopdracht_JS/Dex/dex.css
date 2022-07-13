@@ -68,21 +68,24 @@ body {
   background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f30101);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
 .card__container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 4vw;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  justify-items: center;
+  padding: 3vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  gap: 2vw;
 }
 .card__container > div,
 .card__container div:nth-child(2) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 3vh;
+  margin-bottom: 2vh;
 }
 
 .pokemon__id {
@@ -106,17 +109,41 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.5333333333);
+  border-radius: 5px;
+  padding: 0.25rem;
+}
+.pokemon__stats--hp {
+  color: rgba(45, 221, 45, 0.8784313725);
+}
+.pokemon__stats--atk {
+  color: rgba(226, 24, 24, 0.8784313725);
+}
+.pokemon__stats--def {
+  color: rgba(66, 179, 255, 0.8784313725);
+}
+.pokemon__stats--spd {
+  color: rgba(231, 123, 0, 0.8784313725);
+}
+.pokemon__stats--spatk {
+  color: rgba(174, 52, 255, 0.8784313725);
+}
+.pokemon__stats--spdef {
+  color: rgba(231, 0, 181, 0.8784313725);
 }
 
 .pokemon {
   background-image: url(./rsrcs/images/bg.jpg);
   background-position: center;
-  padding: 10px;
+  min-width: 210px;
+  min-height: 275px;
+  padding: 0.5rem 0.5rem 0 0.5rem;
   border: 2px solid rgb(223, 201, 6);
   border-radius: 5px;
   text-shadow: 2px 2px 3px rgb(7, 7, 7);
   color: rgb(240, 240, 240);
 }
 .pokemon > .container__top > img {
-  width: 10vw;
+  min-width: 7vw;
 }/*# sourceMappingURL=dex.css.map */
