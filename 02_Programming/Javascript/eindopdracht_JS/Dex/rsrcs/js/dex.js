@@ -47,7 +47,7 @@ function createPokeCard(pokeArray) { //verander mij in createPokeCard, voeg ons 
     const genFilteredArray = pokeArray.filter((pokemon) => {
           if(+genSelect.value == 1)    {
             return pokemon.id <= 151                                   //gen1
-
+            
           } else if (+genSelect.value === 2) {
             return pokemon.id >= 152 && pokemon.id <= 251//gen2
 
@@ -94,13 +94,23 @@ function createPokeCard(pokeArray) { //verander mij in createPokeCard, voeg ons 
             <span class='pokemon__id'>ID#${pokeID}</span><br>
             <img id='pokemon__image' src="${spriteURL}" alt="sprite${pokeName}">
     </div>
-    <div class='container__bottom'>
+        <div class='container__bottom'>
             <h3 class='pokemon__name'>${pokeName}</h3><br>
             <small class='type'>Type: <span style=font-weight:700>${pokeType}</span></small>
-
+            <div class='container__stats'>
+                            <ul class='pokemon__stats--left'>
+                            <p>HP:${pokeStats.HP}</p>
+                            <p>Atk:${pokeStats.Attack}</p>
+                            <p>Def:${pokeStats.Defense}</p>
+                            </ul>
+                            <ul class='pokemon__stats--right'>
+                            <p>Spd:${pokeStats.Speed}</p>
+                            <p>SpAtk:${pokeStats["Sp. Attack"]}</p>
+                            <p>SpDef:${pokeStats["Sp. Defense"]}</p>
+                            </ul>
+         </div> 
     </div>
     `;
-    //  <span class='pokemon__stats'>${pokemon.stats}</span> //temp removal from @54${obj.sprite}
     cardElement.innerHTML = cardInnerHTML
     cardContainer.appendChild(cardElement) 
 }}
