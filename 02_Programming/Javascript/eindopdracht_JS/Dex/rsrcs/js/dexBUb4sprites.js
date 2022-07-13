@@ -6,18 +6,18 @@
 // }
 
 
-async function fetchPokemon() {
+async function fetchPokemon(id) {
             const requestURL=`https://raw.githubusercontent.com/TG-WD6/wd-6-repo-Drebinius/b6d620546c44ed59651c4211ca21197e57cbf095/02_Programming/Javascript/eindopdracht_JS/Dex/rsrcs/js/pokedex.json`;
-            // let spriteURL = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+            let spriteURL = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
 
             const request = new Request(requestURL)
-            // const spriteReq = new Request(spriteURL)
+            const spriteReq = new Request(spriteURL)
 
             const response = await fetch(request)
-            // const spriteResponse = await fetch(spriteReq)
+            const spriteResponse = await fetch(spriteReq)
 
             const pokeArray = await response.json()
-            // const spriteVar = await spriteResponse.blob()
+            const spriteVar = await spriteResponse.blob()
             // let pokeArray = await pokeJSON.json()
             // let blob = await spriteResponse.blob()
 
@@ -27,7 +27,7 @@ async function fetchPokemon() {
 genButton.addEventListener('click', (e) => {
                 e.preventDefault();
                 wipePage(); //call to wipepage, otherwise genresults stack on page
-                createPokeCard(pokeArray);});
+                createPokeCard(pokeArray, spriteVar);});
 
 clearButton.addEventListener('click', wipePage)
 }
@@ -42,8 +42,8 @@ const clearButton= document.querySelector('[data-button-clear]')
 const genSelect = document.querySelector('#dropdown__gen')
 
 
-function createPokeCard(pokeArray) { //verander mij in createPokeCard, voeg ons samen!
-    // const spriteNeedID = spriteVar 
+function createPokeCard(pokeArray, spriteVar) { //verander mij in createPokeCard, voeg ons samen!
+    const spriteNeedID = spriteVar 
     const genFilteredArray = pokeArray.filter((pokemon) => {
           if(+genSelect.value == 1)    {
             return pokemon.id <= 151                                   //gen1
@@ -68,9 +68,9 @@ function createPokeCard(pokeArray) { //verander mij in createPokeCard, voeg ons 
           } else return
         })  
         
-            // for (const sprite of spriteNeedID) {
+            for (const sprite of spriteNeedID) {
 
-            // }
+            }
 
   
             for (const pokemon of genFilteredArray) {
@@ -84,7 +84,7 @@ function createPokeCard(pokeArray) { //verander mij in createPokeCard, voeg ons 
 
                    console.log(pokemon)
     //debugger      
-    const spriteURL =`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokeID}.png`          
+
     const cardContainer = document.getElementById('card__container')
     const cardElement = document.createElement('div')
     cardElement.classList.add('pokemon')
@@ -92,7 +92,7 @@ function createPokeCard(pokeArray) { //verander mij in createPokeCard, voeg ons 
     const cardInnerHTML = `
    <div class='container__top'>
             <span class='pokemon__id'>ID#${pokeID}</span><br>
-            <img id='pokemon__image' src="${spriteURL}" alt="sprite${pokeName}">
+            <img id='pokemon__image' src="" alt="sprite${pokeName}">
     </div>
     <div class='container__bottom'>
             <h3 class='pokemon__name'>${pokeName}</h3><br>
