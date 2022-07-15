@@ -7,13 +7,25 @@ const deleteButton =document.querySelector('[data-class-del')
 const searches = document.getElementById('searches')
 
 
-function searchAdd() {  // pusht inhoud van searchbar naar localStorage
+function searchAdd() {  // pusht inhoud van searchbar naar localStorage on ''search''
     searchStorage.push(searchInput.value)
     localStorage.setItem('searches', JSON.stringify(searchStorage))
 }
 
 let searchStorage = localStorage.getItem('searches')
-    ? JSON.parse(localStorage.getItem('searches')) : [ ];
+    ? JSON.parse(localStorage.getItem('searches')) : [ ]; //localstorage items become array
+
+    
+    dupeRemover = () => {// apply on searchstorage to filter for duplicate searches
+      let z = [ ]
+  for (let i = 0; i < searchStorage.length; i++) {
+    if (z.indexOf(searchStorage[i]) == -1) {
+      z.push(searchStorage[i])
+    }
+  }
+  return z
+}
+let parsedStorage = dupeRemover(searchStorage)//applied dupeRemover to searchstorage
 
 function acomp(bar, arr) {
   let searchbarActive
@@ -73,7 +85,7 @@ searchButton.addEventListener('click', (e) => {
   searchAdd()
 })
 
-acomp(document.querySelector('#searchbar'), searchStorage)
+acomp(document.querySelector('#searchbar'), parsedStorage)//apply auto fnc on parsedStorage, used to be searchstorage before filter fnc
 
 
 
