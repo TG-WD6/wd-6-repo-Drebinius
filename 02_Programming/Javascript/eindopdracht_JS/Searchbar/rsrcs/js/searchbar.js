@@ -28,30 +28,36 @@ function acomp(bar, arr) {
       return false 
     } 
     searchbarActive = -1
-    x = document.createElement("div");
-    x.setAttribute("id", this.id + "acomp__list");
-    x.setAttribute("class", "acomp__item");
+    x = document.createElement('div');
+    x.setAttribute('id', this.id + ' acomp__list');
+    x.setAttribute('class', 'acomp__item');
 
     this.parentNode.appendChild(x);
 
     for (i = 0; i < arr.length; i++) {
       if (arr[i].toUpperCase().indexOf(val.toUpperCase()) != -1) {
+        for(i = 0; i < arr.length; i++) {
+             y = document.createElement('div');
+                y.className = ('result'+ (i+1))
+       
 
-        y = document.createElement("div");
         let pos = arr[i].toUpperCase().indexOf(val.toUpperCase()),
           str1 = arr[i].substring(pos, pos + val.length);
 
-          y.innerHTML = arr[i].replace(str1, "<strong>" + str1 + "</strong>");
-          y.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          y.innerHTML = arr[i].replace(str1, '<strong>' + str1 + '</strong>');
+          y.innerHTML += `<input type='hidden' value=''` + arr[i] + '>';
 
-          y.addEventListener("click", function (e) {
-            bar.value =  document.getElementById('searchbar')[0].value;
+          y.addEventListener('click', function (e) {
+            // debugger
+            // searchInput.textContent =  this.innerText;
+            bar.value = this.innerText
+            // debugger
             closeAllLists();
-  })
+   })
   x.appendChild(y)
     }
   }
-})
+}})
 
 function closeAllLists(item) {
   let x = document.getElementsByClassName('acomp__item');
