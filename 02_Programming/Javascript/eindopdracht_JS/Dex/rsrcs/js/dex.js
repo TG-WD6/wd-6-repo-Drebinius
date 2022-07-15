@@ -42,10 +42,10 @@ const clearButton= document.querySelector('[data-button-clear]')
 const genSelect = document.querySelector('#dropdown__gen')
 
 
-function createPokeCard(pokeArray) { //verander mij in createPokeCard, voeg ons samen!
+function createPokeCard(pokeArray) { //filter joined with create fnc. ASSIMILATE
     // const spriteNeedID = spriteVar 
     const genFilteredArray = pokeArray.filter((pokemon) => {
-          if(+genSelect.value == 1)    {
+          if(+genSelect.value === 1)    {  // input always output strings, + - ! before the input value mutates it to a number
             return pokemon.id <= 151                                   //gen1
             
           } else if (+genSelect.value === 2) {

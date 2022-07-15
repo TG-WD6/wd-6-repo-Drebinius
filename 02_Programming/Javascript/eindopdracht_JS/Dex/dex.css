@@ -14,12 +14,23 @@
   align-items: center;
   margin-top: 2vh;
 }
+@media (max-width: 430px) {
+  .controls__container h1 > img {
+    max-width: 75vw;
+  }
+}
 .controls__container .controls {
   display: flex;
   flex-direction: row;
   gap: 2vh;
   margin-top: 1vh;
   margin-bottom: 5vh;
+}
+@media (max-width: 650px) {
+  .controls__container .controls {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .controls__button {

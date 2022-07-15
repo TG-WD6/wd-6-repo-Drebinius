@@ -14,6 +14,12 @@
     flex-direction: column;
     align-items: center;
     margin-top: 2vh;
+        
+            @media (max-width:430px) {
+                h1 > img {
+                    max-width: 75vw;
+            }
+        }
 
     .controls {
         display: flex;
@@ -21,6 +27,11 @@
         gap: 2vh;
         margin-top: 1vh;
         margin-bottom: 5vh;
+
+        @media (max-width:650px) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
 
